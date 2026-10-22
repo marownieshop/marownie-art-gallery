@@ -1,380 +1,202 @@
-function WallPreview({ artwork }: { artwork: Artwork }) {
-  const [roomStyle, setRoomStyle] = useState<
-    'living' | 'reading' | 'own'
-  >('living');
+import React, { useState } from 'react';
+import './index.css';
 
-  const [scale, setScale] = useState<
-    'small' | 'medium' | 'large'
-  >('medium');
+export default function App() {
+  // Состояния для конфигуратора товара
+  const [selectedSize, setSelectedSize] = useState('11 x 14 in');
+  const [selectedPrice, setSelectedPrice] = useState('$39');
+  const [selectedMaterial, setSelectedMaterial] = useState('Fine Art Paper');
+  const [selectedFrame, setSelectedFrame] = useState('Natural Oak');
+  const [activeRoom, setActiveRoom] = useState('living');
 
-  const [uploadedRoom, setUploadedRoom] = useState<string | null>(
-    null
-  );
+  // Данные размеров и цен
+  const sizes = [
+    { size: '8 x 10 in', price: '$29' },
+    { size: '11 x 14 in', price: '$39' },
+    { size: '16 x 20 in', price: '$59' },
+    { size: '20 x 24 in', price: '$79' },
+    { size: '24 x 36 in', price: '$109' },
+  ];
 
-  const [positionX, setPositionX] = useState(50);
-  const [positionY, setPositionY] = useState(45);
+  const materials = [
+    { name: 'Fine Art Paper', price: '$39' },
+    { name: 'Canvas (gallery wrap)', price: '$59' },
+    { name: 'Framed Print', price: '$89' },
+  ];
 
-  const [uploadError, setUploadError] = useState('');
+  const frames = [
+    { name: 'Natural Oak', color: '#d4b595' },
+    { name: 'Black', color: '#2c2723' },
+    { name: 'White', color: '#f5f2eb' },
+    { name: 'Gold', color: '#c5a059' },
+  ];
 
-  const handleRoomUpload = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = event.target.files?.[0];
-
-    if (!file) return;
-
-    if (!file.type.startsWith('image/')) {
-      setUploadError('Пожалуйста, выберите изображение.');
-      return;
-    }
-
-    if (file.size > 10 * 1024 * 1024) {
-      setUploadError('Размер файла не должен превышать 10 МБ.');
-      return;
-    }
-
-    const reader = new FileReader();
-
-    reader.onload = () => {
-      if (typeof reader.result === 'string') {
-        setUploadedRoom(reader.result);
-        setRoomStyle('own');
-        setUploadError('');
-        setPositionX(50);
-        setPositionY(45);
-      }
-    };
-
-    reader.onerror = () => {
-      setUploadError('Не удалось загрузить изображение. Попробуйте ещё раз.');
-    };
-
-    reader.readAsDataURL(file);
-  };
-
-  const scaleWidths = {
-    small: '24%',
-    medium: '34%',
-    large: '46%',
-  };
-
-  const isOwnRoom = roomStyle === 'own' && uploadedRoom !== null;
-
-  const artworkStyle: React.CSSProperties = {
-    position: 'absolute',
-    left: `${positionX}%`,
-    top: `${positionY}%`,
-    width: scaleWidths[scale],
-    maxHeight: '75%',
-    objectFit: 'contain',
-    transform: 'translate(-50%, -50%)',
-    boxShadow: '0 12px 28px rgba(35, 27, 20, 0.24)',
-    border: '7px solid #f8f5ef',
-    outline: '1px solid rgba(65, 48, 35, 0.18)',
-    transition:
-      'width 250ms ease, left 150ms ease, top 150ms ease',
-  };
+  // Изображения комнат для нижней секции
+  const rooms = [
+    { id: 'living', name: 'Living Room', img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80' },
+    { id: 'bedroom', name: 'Bedroom', img: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=400&q=80' },
+    { id: 'office', name: 'Office', img: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=80' },
+    { id: 'dining', name: 'Dining Room', img: 'https://images.unsplash.com/photo-1617806118233-18e1c0c22468?auto=format&fit=crop&w=400&q=80' },
+  ];
 
   return (
-    <section className="wall-preview-section">
-      <div className="wall-preview-heading">
-        <div>
-          <p className="wall-preview-eyebrow">ART IN YOUR SPACE</p>
-          <h2>Найдите идеальное место для искусства</h2>
-          <p className="wall-preview-description">
-            Представьте, как картина будет выглядеть в вашем интерьере.
-            Выберите комнату или загрузите собственную фотографию.
+    <div className="app-wrapper">
+      {/* 1. Шапка сайта */}
+      <header className="header">
+        <h1 className="logo">MAROWNIE Art</h1>
+        <nav className="nav">
+          <a href="#home">Home</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#collections">Collections</a>
+          <a href="#about">About</a>
+        </nav>
+        <div className="header-icons">
+          <span>🔍</span>
+          <span>♡</span>
+          <span>🛍️</span>
+        </div>
+      </header>
+
+      {/* Основной контент */}
+      <main className="main-container">
+        
+        {/* Заголовок блока */}
+        <div className="section-header">
+          <h2 className="page-title">See Art in Your Space</h2>
+          <p className="page-subtitle">
+            Try your favorite artwork in your home before you order. Choose the size, frame and print material — and see how it looks on your wall.
           </p>
         </div>
-      </div>
 
-      <div className="wall-preview-layout">
-        <div className="wall-preview-controls">
-          <div className="wall-preview-control-group">
-            <h3>Выберите интерьер</h3>
+        {/* Трехколоночная сетка */}
+        <div className="product-grid">
 
-            <div className="wall-preview-room-options">
-              <button
-                type="button"
-                className={`wall-preview-option ${
-                  roomStyle === 'living' ? 'is-active' : ''
-                }`}
-                onClick={() => setRoomStyle('living')}
-                aria-pressed={roomStyle === 'living'}
-              >
-                <span className="wall-preview-option-icon">⌂</span>
-                <span>
-                  <strong>Гостиная</strong>
-                  <small>Тёплый минимализм</small>
-                </span>
-              </button>
-
-              <button
-                type="button"
-                className={`wall-preview-option ${
-                  roomStyle === 'reading' ? 'is-active' : ''
-                }`}
-                onClick={() => setRoomStyle('reading')}
-                aria-pressed={roomStyle === 'reading'}
-              >
-                <span className="wall-preview-option-icon">◫</span>
-                <span>
-                  <strong>Уголок для чтения</strong>
-                  <small>Спокойная атмосфера</small>
-                </span>
-              </button>
-
-              <button
-                type="button"
-                className={`wall-preview-option ${
-                  roomStyle === 'own' ? 'is-active' : ''
-                }`}
-                onClick={() => setRoomStyle('own')}
-                aria-pressed={roomStyle === 'own'}
-              >
-                <span className="wall-preview-option-icon">＋</span>
-                <span>
-                  <strong>Моя комната</strong>
-                  <small>Загрузите своё фото</small>
-                </span>
-              </button>
+          {/* КОЛОНКА 1: Информация о картине */}
+          <div className="info-card">
+            <img 
+              src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" 
+              alt="Tuscan Sunset" 
+            />
+            <h3>Tuscany Sunset</h3>
+            <p className="artist">Olga Petrova</p>
+            <p className="artist" style={{ fontSize: '11px', marginTop: '-8px', marginBottom: '12px' }}>Oil on canvas, 2023</p>
+            <p className="desc">
+              A peaceful view of Tuscany, where warm light and soft colors create a feeling of calm and harmony.
+            </p>
+            
+            <div style={{ marginTop: '16px' }}>
+              <p style={{ fontSize: '12px', fontWeight: 600, marginBottom: '8px' }}>Available as print</p>
+              <ul className="prints-list">
+                <li>✓ High-quality fine art print</li>
+                <li>✓ Canvas print (gallery wrap)</li>
+                <li>✓ Framed print</li>
+              </ul>
             </div>
+            <p style={{ fontSize: '12px', marginTop: '16px', color: '#7a7067', cursor: 'pointer' }}>More details →</p>
           </div>
 
-          <div className="wall-preview-control-group">
-            <h3>Размер картины</h3>
-
-            <div className="wall-preview-size-options">
-              {(
-                [
-                  ['small', 'Маленький'],
-                  ['medium', 'Средний'],
-                  ['large', 'Большой'],
-                ] as const
-              ).map(([value, label]) => (
-                <button
-                  type="button"
-                  key={value}
-                  className={`wall-preview-size-button ${
-                    scale === value ? 'is-active' : ''
-                  }`}
-                  onClick={() => setScale(value)}
-                  aria-pressed={scale === value}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {roomStyle === 'own' && (
-            <div className="wall-preview-control-group">
-              <h3>Фотография вашего интерьера</h3>
-
-              <label className="wall-preview-upload-button">
-                <span>↑</span>
-                {uploadedRoom
-                  ? 'Загрузить другое фото'
-                  : 'Выбрать фотографию'}
-
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleRoomUpload}
-                  hidden
+          {/* КОЛОНКА 2: Интерактивная сцена с комнатой */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div 
+              className="scene-container" 
+              style={{ backgroundImage: `url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80')` }}
+            >
+              {/* Картина на стене */}
+              <div className="artwork-on-wall" style={{ border: selectedFrame === 'Natural Oak' ? '6px solid #d4b595' : selectedFrame === 'Black' ? '6px solid #2c2723' : selectedFrame === 'White' ? '6px solid #f5f2eb' : '6px solid #c5a059' }}>
+                <img 
+                  src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=400&q=80" 
+                  alt="Preview" 
+                  style={{ display: 'block', width: '180px' }}
                 />
-              </label>
-
-              <p className="wall-preview-help">
-                Подойдут фотографии в формате JPG, PNG или WEBP,
-                размером до 10 МБ.
-              </p>
-
-              {uploadError && (
-                <p className="wall-preview-error" role="alert">
-                  {uploadError}
-                </p>
-              )}
-
-              {!uploadedRoom && (
-                <p className="wall-preview-help">
-                  После загрузки фотографии картина появится поверх
-                  изображения комнаты.
-                </p>
-              )}
-            </div>
-          )}
-
-          <div className="wall-preview-control-group">
-            <h3>Расположение картины</h3>
-
-            <label
-              className="wall-preview-slider-label"
-              htmlFor="wall-position-x"
-            >
-              По горизонтали
-              <span>{positionX}%</span>
-            </label>
-
-            <input
-              id="wall-position-x"
-              className="wall-preview-slider"
-              type="range"
-              min="10"
-              max="90"
-              value={positionX}
-              onChange={(event) =>
-                setPositionX(Number(event.target.value))
-              }
-            />
-
-            <label
-              className="wall-preview-slider-label"
-              htmlFor="wall-position-y"
-            >
-              По вертикали
-              <span>{positionY}%</span>
-            </label>
-
-            <input
-              id="wall-position-y"
-              className="wall-preview-slider"
-              type="range"
-              min="15"
-              max="80"
-              value={positionY}
-              onChange={(event) =>
-                setPositionY(Number(event.target.value))
-              }
-            />
-          </div>
-
-          <button
-            type="button"
-            className="wall-preview-reset-button"
-            onClick={() => {
-              setScale('medium');
-              setPositionX(50);
-              setPositionY(45);
-            }}
-          >
-            Сбросить настройки
-          </button>
-        </div>
-
-        <div className="wall-preview-visual">
-          <div
-            className={`wall-preview-scene ${
-              roomStyle === 'living'
-                ? 'wall-preview-scene-living'
-                : roomStyle === 'reading'
-                  ? 'wall-preview-scene-reading'
-                  : 'wall-preview-scene-own'
-            }`}
-            style={
-              isOwnRoom
-                ? {
-                    backgroundImage: `url("${uploadedRoom}")`,
-                  }
-                : undefined
-            }
-          >
-            {!isOwnRoom && (
-              <>
-                <div className="wall-preview-ceiling" />
-                <div className="wall-preview-floor" />
-
-                {roomStyle === 'living' ? (
-                  <>
-                    <div className="wall-preview-window">
-                      <div />
-                      <div />
-                    </div>
-
-                    <div className="wall-preview-sofa">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-
-                    <div className="wall-preview-plant">
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                    </div>
-
-                    <div className="wall-preview-side-table" />
-                  </>
-                ) : (
-                  <>
-                    <div className="wall-preview-reading-window">
-                      <div />
-                      <div />
-                    </div>
-
-                    <div className="wall-preview-armchair">
-                      <span />
-                    </div>
-
-                    <div className="wall-preview-bookshelf">
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                    </div>
-
-                    <div className="wall-preview-reading-lamp">
-                      <span />
-                    </div>
-                  </>
-                )}
-              </>
-            )}
-
-            {isOwnRoom ? (
-              <img
-                src={artwork.imageUrl}
-                alt={artwork.title}
-                className="wall-preview-artwork"
-                style={artworkStyle}
-              />
-            ) : (
-              <img
-                src={artwork.imageUrl}
-                alt={artwork.title}
-                className="wall-preview-artwork"
-                style={artworkStyle}
-              />
-            )}
-
-            {isOwnRoom && (
-              <div className="wall-preview-own-label">
-                Предварительный просмотр
               </div>
-            )}
+            </div>
           </div>
 
-          <div className="wall-preview-caption">
-            <div>
-              <strong>{artwork.title}</strong>
-              <span>Предварительный просмотр в интерьере</span>
+          {/* КОЛОНКА 3: Конфигуратор товара (Размер, Материал, Рама) */}
+          <div className="configurator">
+            
+            {/* Шаг 1: Размер */}
+            <div className="config-section">
+              <p className="config-title">1. Choose size</p>
+              <div className="options-grid">
+                {sizes.map((item) => (
+                  <button 
+                    key={item.size}
+                    className={`option-btn ${selectedSize === item.size ? 'active' : ''}`}
+                    onClick={() => { setSelectedSize(item.size); setSelectedPrice(item.price); }}
+                  >
+                    <span className="size-text">{item.size}</span>
+                    <span className="price-text">{item.price}</span>
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <span className="wall-preview-caption-mark">
-              MAROWNIE
-            </span>
+            {/* Шаг 2: Материал */}
+            <div className="config-section">
+              <p className="config-title">2. Choose material</p>
+              <div className="options-grid-2">
+                {materials.map((mat) => (
+                  <button 
+                    key={mat.name}
+                    className={`option-btn ${selectedMaterial === mat.name ? 'active' : ''}`}
+                    onClick={() => setSelectedMaterial(mat.name)}
+                  >
+                    <span className="size-text" style={{ fontSize: '11px' }}>{mat.name}</span>
+                    <span className="price-text">{mat.price}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Шаг 3: Рама */}
+            <div className="config-section">
+              <p className="config-title">3. Choose frame <span style={{ fontSize: '10px', color: '#8c8278' }}>(for framed prints)</span></p>
+              <div className="frames-grid">
+                {frames.map((fr) => (
+                  <button 
+                    key={fr.name}
+                    className={`frame-btn ${selectedFrame === fr.name ? 'active' : ''}`}
+                    onClick={() => setSelectedFrame(fr.name)}
+                  >
+                    <div className="frame-circle" style={{ backgroundColor: fr.color }}></div>
+                    <span>{fr.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Итоговая цена и кнопка покупки */}
+            <div className="total-price">{selectedPrice}</div>
+            <div className="price-sub">{selectedSize}, {selectedMaterial}</div>
+
+            <button className="btn-primary">Add to Cart</button>
+            <button className="btn-secondary">♡ Save to Wishlist</button>
+
           </div>
 
-          <p className="wall-preview-disclaimer">
-            Визуализация предназначена для оценки расположения и размера.
-            Реальные пропорции и освещение могут отличаться.
-          </p>
         </div>
-      </div>
-    </section>
+
+        {/* НИЖНЯЯ СЕКЦИЯ: Выбор комнат (Try in Different Rooms) */}
+        <div style={{ marginTop: '60px' }}>
+          <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '24px', marginBottom: '8px' }}>Try in Different Rooms</h3>
+          <p style={{ color: '#6e6760', fontSize: '13px', marginBottom: '20px' }}>See how the artwork fits your style and space — from living rooms to bedrooms, offices and more.</p>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+            {rooms.map((room) => (
+              <div 
+                key={room.id} 
+                onClick={() => setActiveRoom(room.id)}
+                style={{ cursor: 'pointer', border: activeRoom === room.id ? '2px solid #505342' : '1px solid #e0d8cf', borderRadius: '6px', overflow: 'hidden', background: '#fff' }}
+              >
+                <img src={room.img} alt={room.name} style={{ width: '100%', height: '120px', objectFit: 'cover' }} />
+                <p style={{ padding: '10px', fontSize: '13px', fontWeight: 500 }}>{room.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </main>
+    </div>
   );
 }
