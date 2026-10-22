@@ -1,275 +1,4 @@
-
-Продолжение из чата
-Напиши код примерки картины (1)
-открыла marownie-art-gallery
-
-src
- код
-
-Отлично! Ты уже открыла нужный проект. ❤️ Давай найдём код, чтобы я смогла подготовить тебе полные исправленные файлы.
-
-Шаг 1. Открой файл App.tsx
-На странице GitHub, где ты сейчас находишься:
-
-Нажми на папку src.
-
-В списке файлов найди App.tsx и открой его.
-
-Нажми кнопку с изображением карандаша, если она доступна, или просто открой файл для просмотра.
-
-Скопируй весь код из файла и вставь сюда в чат.
-
-Вот прямая ссылка на файл:
-
-Открыть src/App.tsx на GitHub
-
-Шаг 2. Я подготовлю полный код
-Когда ты пришлёшь App.tsx, я подготовлю:
-
-Полный src/App.tsx — с исправленным предпросмотром картины на стене.
-
-Полный src/index.css — с согласованными стилями, без конфликтующих правил и ошибок в селекторах.
-
-Чёткую инструкцию, какой файл открыть и какой код вставить.
-
-Важно: пока не удаляй старый код и не заменяй весь CSS. Сначала посмотрим на компонент, чтобы сохранить остальные страницы твоего магазина.
-
-Если не получается скопировать код, просто пришли скриншот страницы с файлами внутри папки src.
-
-Это также может вас заинтересовать.
-
-
-
-я могу сохранить этот код ? @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@plugin "@tailwindcss/typography";
-
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-  --font-sans: var(--app-font-sans);
-  --font-serif: var(--app-font-serif);
-  --font-mono: var(--app-font-mono);
-  --radius-md: var(--radius);
-}
-
-:root {
-  --background: 40 33% 94%;
-  --foreground: 30 9% 17%;
-  --border: 37 15% 82%;
-  --input: 37 15% 82%;
-  --ring: 68 16% 35%;
-  --card: 40 33% 94%;
-  --card-foreground: 30 9% 17%;
-  --primary: 68 16% 35%;
-  --primary-foreground: 40 33% 94%;
-  --secondary: 39 23% 89%;
-  --secondary-foreground: 30 9% 17%;
-  --muted: 39 23% 89%;
-  --muted-foreground: 28 7% 43%;
-  --accent: 68 16% 35%;
-  --accent-foreground: 40 33% 94%;
-  --app-font-sans: 'DM Sans', sans-serif;
-  --app-font-serif: 'Cormorant Garamond', Georgia, serif;
-  --app-font-mono: 'DM Sans', sans-serif;
-  --radius: 0.3rem;
-}
-
-.dark {
-  --background: 30 9% 17%;
-  --foreground: 40 33% 94%;
-  --border: 30 7% 31%;
-  --input: 30 7% 31%;
-  --ring: 68 24% 62%;
-  --card: 30 9% 20%;
-  --card-foreground: 40 33% 94%;
-  --primary: 68 24% 62%;
-  --primary-foreground: 30 9% 17%;
-  --secondary: 30 7% 25%;
-  --secondary-foreground: 40 33% 94%;
-  --muted: 30 7% 25%;
-  --muted-foreground: 36 12% 70%;
-  --accent: 68 24% 62%;
-  --accent-foreground: 30 9% 17%;
-}
-
-@layer base {
-  * { @apply border-border; }
-  html { scroll-behavior: smooth; }
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: var(--app-font-sans);
-    margin: 0;
-  }
-  button, a, input, select { -webkit-tap-highlight-color: transparent; }
-  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
-    outline: 2px solid hsl(var(--primary));
-    outline-offset: 4px;
-  }
-}
-
-:root { color-scheme: light; }
-.serif { font-family: var(--app-font-serif); }
-.eyebrow { font-size: 10px; letter-spacing: .19em; text-transform: uppercase; font-weight: 600; }
-.page-wrap { width: min(1440px, calc(100% - 96px)); margin: 0 auto; }
-.art-image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 700ms cubic-bezier(.2,.65,.2,1); }
-.artwork-link:hover .art-image { transform: scale(1.035); }
-.artwork-link:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 5px; }
-.reveal { animation: reveal .7s cubic-bezier(.2,.65,.2,1) both; }
-.reveal-delay { animation-delay: .12s; }
-.reveal-late { animation-delay: .22s; }
-@keyframes reveal { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-@media (max-width: 760px) {
-  .page-wrap { width: min(100% - 40px, 600px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
-}
-
-.site-header { height: 86px; border-bottom: 1px solid hsl(34 16% 85% / .72); position: relative; z-index: 10; background: hsl(42 38% 96% / .96); }
-.header-inner { height: 100%; display: flex; justify-content: space-between; align-items: center; }
-.wordmark { display: flex; flex-direction: column; gap: 2px; color: inherit; text-decoration: none; }
-.wordmark-name { font-family: var(--app-font-serif); font-size: 28px; letter-spacing: -.055em; line-height: .95; }
-.wordmark-name span { color: hsl(var(--primary)); }
-.wordmark-caption { font-size: 8px; text-transform: uppercase; letter-spacing: .17em; color: hsl(var(--muted-foreground)); margin-top: 5px; }
-.main-nav { display: flex; align-items: center; gap: 30px; height: 100%; }
-.nav-link { color: hsl(var(--foreground) / .8); text-decoration: none; font-size: 12px; position: relative; padding: 10px 0; }
-.nav-link::after { content: ''; position: absolute; bottom: 3px; left: 0; right: 100%; height: 1px; background: hsl(var(--primary)); transition: right .25s ease; }
-.nav-link:hover::after, .nav-link.active::after { right: 0; }
-.nav-inquire { display: flex; align-items: center; gap: 14px; padding: 13px 17px; border: 1px solid hsl(var(--foreground) / .45); color: hsl(var(--foreground)); font-size: 11px; text-decoration: none; transition: background .25s, color .25s; }
-.nav-inquire:hover { background: hsl(var(--foreground)); color: hsl(var(--background)); }
-.mobile-menu { display: none; border: 0; background: transparent; color: hsl(var(--foreground)); padding: 8px; }
-
-.home-hero { min-height: 660px; display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; position: relative; padding-top: 43px; padding-bottom: 70px; }
-.hero-text { position: relative; z-index: 1; padding: 30px 0 0 4.5%; }
-.eyebrow { color: hsl(var(--muted-foreground)); }
-.hero-kicker { display: flex; align-items: center; gap: 10px; }
-.kicker-dot { width: 7px; height: 7px; border-radius: 50%; background: hsl(var(--primary)); }
-.home-hero h1 { font-size: clamp(64px, 7.35vw, 108px); line-height: .94; letter-spacing: -.06em; font-weight: 400; margin: 35px 0 24px; }
-.home-hero h1 em, .page-heading h1 em, .teaser-copy h2 em, .closing-invite h2 em, .about-title h1 em, .about-values h2 em, .about-status h2 em, .missing-art h1 em { color: hsl(var(--primary)); font-weight: 400; }
-.hero-deck { max-width: 340px; color: hsl(var(--muted-foreground)); font-size: 14px; line-height: 1.8; margin: 0 0 27px; }
-.text-link { color: hsl(var(--foreground)); display: inline-flex; align-items: center; gap: 15px; font-size: 11px; letter-spacing: .035em; text-decoration: none; background: none; border: 0; padding: 0; cursor: pointer; transition: color .2s; }
-.text-link svg { transition: transform .2s; }
-.text-link:hover { color: hsl(var(--primary)); }
-.text-link:hover svg { transform: translateX(3px); }
-.hero-footnote { position: absolute; bottom: 24px; left: 4.5%; color: hsl(var(--muted-foreground)); display: flex; gap: 22px; align-items: center; font-size: 9px; text-transform: uppercase; letter-spacing: .13em; }
-.hero-footnote span:first-child { color: hsl(var(--primary)); }
-.hero-art-wrap { height: 526px; width: 90%; justify-self: end; position: relative; margin-right: 3%; }
-.hero-art-link { display: block; overflow: hidden; height: 100%; background: hsl(30 12% 87%); }
-.hero-art-link img { object-position: center 47%; }
-.hero-art-caption { position: absolute; bottom: 27px; left: -42px; display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: hsl(var(--background)); min-width: 232px; }
-.caption-rule { width: 20px; height: 1px; background: hsl(var(--primary)); }
-.hero-art-caption div { display: flex; flex-direction: column; gap: 4px; }
-.caption-title { font-size: 15px; }
-.caption-sub { color: hsl(var(--muted-foreground)); font-size: 9px; letter-spacing: .04em; }
-.hero-side-note { position: absolute; right: -26px; top: 50%; transform: translate(100%, -50%); writing-mode: vertical-rl; font-size: 8px; letter-spacing: .2em; color: hsl(var(--muted-foreground)); }
-.hero-index { position: absolute; bottom: 29px; right: 3%; color: hsl(var(--primary)); font-size: 13px; font-style: italic; }
-
-.intro-strip { background: #eee9df; margin-top: 4px; }
-.intro-inner { min-height: 215px; display: grid; grid-template-columns: 1fr 2.15fr auto; gap: 45px; align-items: center; }
-.intro-inner > .eyebrow { align-self: start; margin-top: 53px; }
-.intro-inner p { max-width: 720px; font-size: clamp(24px, 3vw, 37px); line-height: 1.35; margin: 0; letter-spacing: -.025em; }
-.intro-inner p em { color: hsl(var(--primary)); font-weight: 400; }
-.circle-link { border: 1px solid hsl(var(--foreground) / .3); color: hsl(var(--foreground)); width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; text-decoration: none; transition: color .2s, background .2s; }
-.circle-link:hover { color: hsl(var(--background)); background: hsl(var(--primary)); border-color: hsl(var(--primary)); }
-.featured-section { padding-top: 106px; padding-bottom: 116px; }
-.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 39px; }
-.section-heading h2 { font-weight: 400; font-size: 43px; letter-spacing: -.04em; margin: 12px 0 0; }
-.art-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 29px; row-gap: 57px; }
-.art-card-image { display: block; overflow: hidden; aspect-ratio: 4 / 4.8; position: relative; background: #e2dcd2; }
-.image-index { position: absolute; bottom: 14px; left: 16px; color: white; font-size: 9px; letter-spacing: .16em; text-shadow: 0 1px 5px #201b19; }
-.image-arrow { position: absolute; right: 14px; bottom: 14px; display: grid; place-items: center; background: hsl(var(--background)); color: hsl(var(--foreground)); width: 35px; height: 35px; opacity: 0; transform: translateY(5px); transition: opacity .25s, transform .25s; }
-.artwork-link:hover .image-arrow, .artwork-link:focus-visible .image-arrow { opacity: 1; transform: translateY(0); }
-.art-card-copy { display: flex; justify-content: space-between; align-items: start; gap: 10px; padding-top: 16px; }
-.art-title { font-size: 22px; font-weight: 400; margin: 0 0 4px; letter-spacing: -.025em; }
-.art-artist { display: inline-block; color: hsl(var(--muted-foreground)); margin: 0; font-size: 11px; text-decoration: none; }
-.art-artist:hover { color: hsl(var(--primary)); }
-.art-price { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; margin-top: 3px; text-align: right; }
-.art-price-va
-…
-Да, конечно! ❤️ Этот код можно сохранить. Это CSS-файл, который отвечает за оформление сайта и визуальный предпросмотр картины на стене.
-
-Но перед сохранением нужно исправить несколько ошибок, иначе некоторые элементы могут отображаться неправильно.
-
-Как сохранить код
-Getting started with TypeScript + React - DEV Community
-
-1. Открой файл src/index.css
-
-В своём репозитории GitHub найди папку src, а внутри неё — файл index.css.
-
-How-to-Create-a-GitHub-Portfolio/README.md at main · katiehuangx/How-to-Create-a-GitHub-Portfolio · GitHub
-
-2. Вставь код
-
-Если хочешь заменить содержимое файла, сначала сохрани старую версию на всякий случай. Затем вставь новый код целиком.
-
-Making Good PRs: Basic Pull Requests
-
-3. Сохрани изменения
-
-Нажми Commit changes…, подтверди сохранение. После этого изменения будут записаны в репозиторий.
-
-Важное исправление в твоём коде
-Найди этот участок:
-
-.wall-preview-plant i(1) { transform: rotate(-48deg); }
-.wall-preview-plant i(2) { transform: rotate(-24deg); height: 75%; }
-.wall-preview-plant i(3) { transform: rotate(10deg); height: 82%; }
-.wall-preview-plant i(4) { transform: rotate(35deg); height: 68%; }
-.wall-preview-plant i(5) { transform: rotate(55deg); height: 55%; }
-
-Замени его на:
-
-.wall-preview-plant i:nth-child(1) { transform: rotate(-48deg); }
-.wall-preview-plant i:nth-child(2) { transform: rotate(-24deg); height: 75%; }
-.wall-preview-plant i:nth-child(3) { transform: rotate(10deg); height: 82%; }
-.wall-preview-plant i:nth-child(4) { transform: rotate(35deg); height: 68%; }
-.wall-preview-plant i:nth-child(5) { transform: rotate(55deg); height: 55%; }
-
-И ещё исправь две строки для книжной полки:
-
-.wall-preview-bookshelf i:nth-child(2n) {
-  width: 75%;
-  background: #c5ad91;
-}
-
-.wall-preview-bookshelf i:nth-child(3n) {
-  width: 90%;
-  background: #d5c0a5;
-}
-
-Обрати внимание: твой код содержит два набора стилей для .wall-preview-section и .wall-preview-controls. Они могут конфликтовать, поэтому пока не заменяй весь файл вслепую.
-
-Если твоя цель — полностью запустить новый предпросмотр картины, пришли ещё код src/App.tsx. Я помогу согласовать оба файла, чтобы тебе не пришлось самостоятельно искать ошибки.
-
-Это также может вас заинтересовать.
-
-
-
-напиши новый код я заменю полностью
-Конечно! Ниже новый код для src/index.css. Полностью замени старый код в файле src/index.css этим кодом. Я оставил базовые стили сайта и исправил ошибки в CSS для предпросмотра картины на стене.
-
-/* ================================
-   ОСНОВНЫЕ СТИЛИ САЙТА
-================================ */
-
+```css
 * {
   box-sizing: border-box;
 }
@@ -319,10 +48,6 @@ a {
   min-height: 100vh;
 }
 
-/* ================================
-   СЕКЦИЯ ПРЕДПРОСМОТРА НА СТЕНЕ
-================================ */
-
 .wall-preview-section {
   width: 100%;
   padding: 64px 24px;
@@ -366,10 +91,6 @@ a {
   font-size: 15px;
   line-height: 1.8;
 }
-
-/* ================================
-   ОБЛАСТЬ СТЕНЫ
-================================ */
 
 .wall-preview-stage {
   position: relative;
@@ -415,10 +136,6 @@ a {
   content: "";
 }
 
-/* ================================
-   КАРТИНА
-================================ */
-
 .wall-preview-artwork {
   position: relative;
   z-index: 1;
@@ -459,8 +176,6 @@ a {
   object-fit: cover;
 }
 
-/* Размеры картины */
-
 .wall-preview-artwork.size-small {
   width: min(34%, 250px);
 }
@@ -472,10 +187,6 @@ a {
 .wall-preview-artwork.size-large {
   width: min(58%, 420px);
 }
-
-/* ================================
-   ДЕКОРАТИВНЫЕ РАСТЕНИЯ
-================================ */
 
 .wall-preview-plant {
   position: absolute;
@@ -538,10 +249,6 @@ a {
   content: "";
 }
 
-/* ================================
-   ДЕКОРАТИВНАЯ КНИЖНАЯ ПОЛКА
-================================ */
-
 .wall-preview-bookshelf {
   position: absolute;
   right: 5%;
@@ -575,10 +282,6 @@ a {
   height: 48px;
   background: #78816b;
 }
-
-/* ================================
-   ПАНЕЛЬ УПРАВЛЕНИЯ
-================================ */
 
 .wall-preview-controls {
   display: grid;
@@ -638,10 +341,6 @@ a {
   font-weight: 600;
 }
 
-/* ================================
-   КНОПКИ
-================================ */
-
 .wall-preview-button {
   display: inline-flex;
   min-height: 46px;
@@ -685,10 +384,6 @@ a {
   margin-top: 24px;
 }
 
-/* ================================
-   ПОДСКАЗКА
-================================ */
-
 .wall-preview-note {
   margin: 18px auto 0;
   color: #82776c;
@@ -696,10 +391,6 @@ a {
   line-height: 1.7;
   text-align: center;
 }
-
-/* ================================
-   АДАПТИВНОСТЬ: ПЛАНШЕТЫ
-================================ */
 
 @media (max-width: 768px) {
   .wall-preview-section {
@@ -729,10 +420,6 @@ a {
     transform-origin: bottom right;
   }
 }
-
-/* ================================
-   АДАПТИВНОСТЬ: ТЕЛЕФОНЫ
-================================ */
 
 @media (max-width: 480px) {
   .wall-preview-section {
@@ -800,10 +487,6 @@ a {
   }
 }
 
-/* ================================
-   ДОСТУПНОСТЬ
-================================ */
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -814,295 +497,4 @@ a {
     animation-iteration-count: 1 !important;
   }
 }
-Важно: этот CSS задаёт внешний вид, но сам по себе не создаёт работающий предпросмотр. Чтобы изменение размера картины, загрузка изображений и элементы управления действительно работали, в src/App.tsx должен быть соответствующий React-компонент с такими же CSS-классами.
-
-После замены сохрани файл и сделай Commit changes на GitHub. Если после этого страница выглядит неправильно, пришли код src/App.tsx — я подготовлю согласованный вариант для обоих файлов.
-
-Для замены кода можно рассмотреть один вариант веб-дизайна на заказ.
-
-
-
-это тоже писать в коде ? у меня сайт на английском должен быьть /* ================================
-   ОСНОВНЫЕ СТИЛИ САЙТА
-================================ */
-Нет, всё хорошо 😊 Это комментарий для разработчика, он не отображается на сайте.
-
-Но раз сайт у тебя на английском, можешь заменить его на английский:
-
-/* ================================
-   MAIN WEBSITE STYLES
-================================ */
-
-Важно: комментарии на русском внутри CSS не повлияют на язык сайта, но сами тексты, которые посетители видят на странице, должны быть на английском — их нужно менять в src/App.tsx или другом файле с текстами сайта.
-
-Можешь оставить комментарии на русском или перевести их на английский — CSS будет работать одинаково.
-
-Это также может вас заинтересовать.
-
-
-
-мне нужен просто код полностью
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  font-family: Inter, Arial, sans-serif;
-  color: #292522;
-  background: #faf8f5;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#root {
-  min-height: 100vh;
-}
-
-.wall-preview-section {
-  width: 100%;
-  padding: 64px 24px;
-  background: #faf8f5;
-  color: #292522;
-}
-
-.wall-preview-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.wall-preview-header {
-  max-width: 760px;
-  margin: 0 auto 36px;
-  text-align: center;
-}
-
-.wall-preview-eyebrow {
-  margin: 0 0 12px;
-  color: #9b795c;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.wall-preview-title {
-  margin: 0 0 16px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 400;
-  line-height: 1.12;
-}
-
-.wall-preview-description {
-  max-width: 600px;
-  margin: 0 auto;
-  color: #716a63;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.wall-preview-stage {
-  position: relative;
-  display: flex;
-  min-height: 440px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 48px 24px;
-  border: 1px solid #e8e0d7;
-  border-radius: 4px;
-  background-color: #e8dfd3;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      rgba(110, 83, 59, 0.035) 1px,
-      transparent 1px
-    );
-  background-size: 5px 5px, 100% 4px;
-}
-
-.wall-preview-stage::before {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 10px;
-  background: #c8b8a6;
-  content: "";
-}
-
-.wall-preview-stage::after {
-  position: absolute;
-  right: 0;
-  bottom: 10px;
-  left: 0;
-  height: 2px;
-  background: rgba(83, 62, 45, 0.15);
-  content: "";
-}
-
-.wall-preview-artwork {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  width: min(54%, 390px);
-  aspect-ratio: 3 / 4;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  background: #f6f0e7;
-  border: 1px solid #d4c5b4;
-  box-shadow:
-    0 4px 8px rgba(45, 33, 24, 0.12),
-    0 18px 32px rgba(45, 33, 24, 0.18);
-  transition:
-    width 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.wall-preview-artwork img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.wall-preview-artwork-frame {
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  border: 1px solid #b49a7c;
-  background: #fffaf2;
-}
-
-.wall-preview-artwork-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.wall-preview-artwork.size-small {
-  width: min(34%, 250px);
-}
-
-.wall-preview-artwork.size-medium {
-  width: min(46%, 330px);
-}
-
-.wall-preview-artwork.size-large {
-  width: min(58%, 420px);
-}
-
-.wall-preview-plant {
-  position: absolute;
-  z-index: 1;
-  bottom: 10px;
-  left: 5%;
-  width: 100px;
-  height: 180px;
-  pointer-events: none;
-}
-
-.wall-preview-plant i {
-  position: absolute;
-  display: block;
-  width: 30px;
-  height: 65px;
-  border-radius: 100% 0 100% 0;
-  background: #64775a;
-  transform-origin: bottom center;
-}
-
-.wall-preview-plant i:nth-child(1) {
-  bottom: 20px;
-  left: 30px;
-  transform: rotate(-35deg);
-}
-
-.wall-preview-plant i:nth-child(2) {
-  bottom: 55px;
-  left: 10px;
-  transform: rotate(-55deg);
-}
-
-.wall-preview-plant i:nth-child(3) {
-  bottom: 70px;
-  left: 43px;
-  transform: rotate(30deg);
-}
-
-.wall-preview-plant i:nth-child(4) {
-  bottom: 100px;
-  left: 20px;
-  transform: rotate(-45deg);
-}
-
-.wall-preview-plant i:nth-child(5) {
-  bottom: 115px;
-  left: 48px;
-  transform: rotate(35deg);
-}
-
-.wall-preview-plant::after {
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-  width: 65px;
-  height: 48px;
-  border-radius: 4px 4px 16px 16px;
-  background: #b77f58;
-  content: "";
-}
-
-.wall-preview-bookshelf {
-  position: absolute;
-  right: 5%;
-  bottom: 10px;
-  z-index: 1;
-  display: flex;
-  width: 150px;
-  height: 95px;
-  align-items: flex-end;
-  justify-content: center;
-
-
-
-⋮⋮⋮⋮⋮⋮⋮⋮
+```
