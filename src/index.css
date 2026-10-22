@@ -1,4 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+Продолжение из чата
+Напиши код примерки картины (1)
+открыла marownie-art-gallery
+
+src
+ код
+
+Отлично! Ты уже открыла нужный проект. ❤️ Давай найдём код, чтобы я смогла подготовить тебе полные исправленные файлы.
+
+Шаг 1. Открой файл App.tsx
+На странице GitHub, где ты сейчас находишься:
+
+Нажми на папку src.
+
+В списке файлов найди App.tsx и открой его.
+
+Нажми кнопку с изображением карандаша, если она доступна, или просто открой файл для просмотра.
+
+Скопируй весь код из файла и вставь сюда в чат.
+
+Вот прямая ссылка на файл:
+
+Открыть src/App.tsx на GitHub
+
+Шаг 2. Я подготовлю полный код
+Когда ты пришлёшь App.tsx, я подготовлю:
+
+Полный src/App.tsx — с исправленным предпросмотром картины на стене.
+
+Полный src/index.css — с согласованными стилями, без конфликтующих правил и ошибок в селекторах.
+
+Чёткую инструкцию, какой файл открыть и какой код вставить.
+
+Важно: пока не удаляй старый код и не заменяй весь CSS. Сначала посмотрим на компонент, чтобы сохранить остальные страницы твоего магазина.
+
+Если не получается скопировать код, просто пришли скриншот страницы с файлами внутри папки src.
+
+Это также может вас заинтересовать.
+
+
+
+я могу сохранить этот код ? @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -159,331 +201,908 @@
 .art-artist { display: inline-block; color: hsl(var(--muted-foreground)); margin: 0; font-size: 11px; text-decoration: none; }
 .art-artist:hover { color: hsl(var(--primary)); }
 .art-price { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; margin-top: 3px; text-align: right; }
-.art-price-value { color: hsl(var(--foreground)); font-size: 11px; white-space: nowrap; }
-.art-price-label { color: hsl(var(--muted-foreground)); font-size: 7px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.art-price-va
+…
+Да, конечно! ❤️ Этот код можно сохранить. Это CSS-файл, который отвечает за оформление сайта и визуальный предпросмотр картины на стене.
 
-.artist-teaser { background: #e8e1d8; padding: 89px 0 96px; }
-.teaser-inner { display: grid; grid-template-columns: .85fr 1.15fr; gap: 12%; align-items: center; }
-.teaser-copy h2 { font-weight: 400; font-size: clamp(42px, 5vw, 62px); line-height: 1.04; letter-spacing: -.05em; margin: 21px 0 16px; }
-.teaser-copy p { max-width: 285px; font-size: 12px; line-height: 1.75; color: hsl(var(--muted-foreground)); margin: 0 0 24px; }
-.teaser-artists { border-top: 1px solid hsl(var(--foreground) / .19); }
-.artist-line { display: grid; grid-template-columns: 38px 1fr 120px 18px; gap: 10px; align-items: center; text-decoration: none; color: hsl(var(--foreground)); border-bottom: 1px solid hsl(var(--foreground) / .19); padding: 19px 0; transition: padding .2s, color .2s; }
-.artist-line:hover { color: hsl(var(--primary)); padding-left: 6px; }
-.artist-line-index { color: hsl(var(--primary)); font-size: 9px; letter-spacing: .1em; }
-.artist-line-name { font-size: 23px; }
-.artist-line-type { color: hsl(var(--muted-foreground)); font-size: 10px; }
-.artist-line-note { display: block; text-align: right; padding-top: 12px; color: hsl(var(--muted-foreground)); font-size: 9px; }
-.closing-invite { padding-top: 110px; padding-bottom: 126px; position: relative; overflow: hidden; }
-.closing-invite h2 { font-size: clamp(52px, 7vw, 84px); line-height: .99; letter-spacing: -.06em; font-weight: 400; margin: 24px 0 30px; }
-.button-link { border: 0; display: inline-flex; align-items: center; gap: 20px; background: hsl(var(--primary)); color: hsl(var(--background)); text-decoration: none; padding: 15px 20px; font-family: inherit; font-size: 11px; cursor: pointer; transition: background .2s, color .2s; }
-.button-link:hover { background: hsl(var(--foreground)); color: hsl(var(--background)); }
-.closing-mark { position: absolute; right: 4%; bottom: -110px; font-family: var(--app-font-serif); font-size: 350px; line-height: 1; color: hsl(345 33% 34% / .06); letter-spacing: -.12em; pointer-events: none; }
+Но перед сохранением нужно исправить несколько ошибок, иначе некоторые элементы могут отображаться неправильно.
 
-.site-footer { background: #2d2927; color: #f5f0e6; padding: 62px 0 21px; }
-.footer-main { display: grid; grid-template-columns: 1.2fr .8fr .8fr 1fr; gap: 7%; padding-bottom: 52px; }
-.footer-brand .wordmark-name { font-size: 31px; }
-.footer-brand p { font-family: var(--app-font-serif); font-size: 17px; line-height: 1.5; max-width: 230px; color: #d2c9bd; margin-top: 18px; }
-.footer-nav, .footer-contact, .footer-note { display: flex; flex-direction: column; align-items: start; gap: 12px; }
-.footer-nav .eyebrow, .footer-contact .eyebrow, .footer-note .eyebrow { color: #b9aaa0; margin-bottom: 5px; }
-.footer-nav a { font-size: 11px; color: #f5f0e6; text-decoration: none; }
-.footer-nav a:hover { color: #d39ca6; }
-.footer-contact p, .footer-note p { max-width: 255px; color: #d2c9bd; font-size: 11px; line-height: 1.75; margin: 0; }
-.footer-bottom { display: flex; justify-content: space-between; border-top: 1px solid #514946; padding-top: 17px; color: #b9aaa0; font-size: 9px; letter-spacing: .04em; }
+Как сохранить код
+Getting started with TypeScript + React - DEV Community
 
-.inner-page { padding-top: 89px; padding-bottom: 110px; }
-.page-heading { padding: 0 0 52px; }
-.page-heading h1 { font-size: clamp(55px, 7vw, 87px); line-height: .98; letter-spacing: -.06em; font-weight: 400; margin: 24px 0 18px; }
-.page-heading p { max-width: 450px; color: hsl(var(--muted-foreground)); font-size: 13px; line-height: 1.7; margin: 0; }
-.collection-toolbar { border-top: 1px solid hsl(var(--foreground) / .18); border-bottom: 1px solid hsl(var(--foreground) / .18); display: flex; justify-content: space-between; align-items: center; min-height: 66px; margin-bottom: 20px; gap: 20px; }
-.category-tabs { display: flex; gap: 7px; }
-.filter-chip { border: 1px solid transparent; padding: 9px 13px; background: transparent; font-family: inherit; font-size: 10px; color: hsl(var(--muted-foreground)); cursor: pointer; transition: color .2s, border-color .2s, background .2s; }
-.filter-chip.selected { color: hsl(var(--primary)); border-color: hsl(var(--primary) / .42); background: hsl(var(--primary) / .04); }
-.search-box { height: 37px; display: flex; align-items: center; gap: 9px; border-bottom: 1px solid hsl(var(--foreground) / .28); color: hsl(var(--muted-foreground)); width: 224px; }
-.search-box input { border: 0; outline: 0; width: 100%; background: transparent; color: hsl(var(--foreground)); font: inherit; font-size: 10px; }
-.search-box input::placeholder { color: hsl(var(--muted-foreground)); }
-.search-box kbd { font-size: 8px; border: 1px solid hsl(var(--border)); padding: 2px 4px; }
-.catalog-controls { display: flex; align-items: center; gap: 23px; padding: 0 0 13px; border-bottom: 1px solid hsl(var(--foreground) / .12); }
-.catalog-select-label { display: flex; align-items: center; gap: 10px; color: hsl(var(--muted-foreground)); font-size: 9px; letter-spacing: .05em; }
-.catalog-select-label select { max-width: 220px; min-width: 94px; padding: 6px 18px 6px 2px; border: 0; border-bottom: 1px solid hsl(var(--foreground) / .25); border-radius: 0; background: transparent; color: hsl(var(--foreground)); font: inherit; font-size: 10px; letter-spacing: 0; cursor: pointer; }
-.catalog-select-label select:focus-visible { outline: 2px solid hsl(var(--primary) / .55); outline-offset: 3px; }
-.clear-catalog { margin-left: auto; }
-.results-line { display: flex; justify-content: space-between; color: hsl(var(--muted-foreground)); font-size: 9px; letter-spacing: .06em; margin: 24px 0; }
-.discover-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 56px; }
-.sample-disclaimer { margin-top: 56px; padding-top: 17px; border-top: 1px solid hsl(var(--border)); font-size: 10px; line-height: 1.6; color: hsl(var(--muted-foreground)); }
-.empty-results { border-top: 1px solid hsl(var(--border)); min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-.empty-mark { color: hsl(var(--primary)); font-size: 45px; }
-.empty-results h2 { font-size: 32px; font-weight: 400; margin: 10px 0; }
-.empty-results p { color: hsl(var(--muted-foreground)); font-size: 12px; }
-.empty-results button { margin-top: 15px; }
+1. Открой файл src/index.css
 
-.artist-page-heading { padding-bottom: 62px; }
-.artist-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 8%; row-gap: 72px; }
-.artist-profile:nth-child(even) { margin-top: 75px; }
-.artist-image-link { display: block; height: clamp(280px, 36vw, 470px); position: relative; overflow: hidden; background: #ded8cf; }
-.artist-profile:nth-child(2) .artist-image-link, .artist-profile:nth-child(3) .artist-image-link { height: clamp(250px, 30vw, 390px); }
-.artist-image-number { position: absolute; right: 18px; bottom: 14px; color: white; font-size: 10px; text-shadow: 0 1px 4px #333; }
-.artist-profile-copy { padding-top: 19px; }
-.artist-profile-copy h2 { font-weight: 400; font-size: 31px; letter-spacing: -.04em; margin: 9px 0 6px; }
-.artist-profile-copy h2 a { color: inherit; text-decoration: none; }
-.artist-profile-copy h2 a:hover { color: hsl(var(--primary)); }
-.artist-profile-copy p { font-family: var(--app-font-serif); font-style: italic; font-size: 14px; color: hsl(var(--muted-foreground)); margin: 0 0 16px; }
-.artist-image-empty { display: grid; place-items: center; color: hsl(var(--primary)); font-family: var(--app-font-serif); font-size: 70px; }
-.artist-footnote { border-top: 1px solid hsl(var(--border)); margin-top: 86px; padding-top: 20px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 20px; }
-.artist-footnote p { font-size: 11px; line-height: 1.7; color: hsl(var(--muted-foreground)); margin: 0; max-width: 590px; }
-.artist-detail-page { padding-top: 42px; }
-.artist-detail-heading { max-width: 870px; }
-.artist-detail-heading h1 { font-size: clamp(56px, 7vw, 86px); line-height: .98; letter-spacing: -.06em; font-weight: 400; margin: 23px 0 29px; }
-.artist-information-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 26px; padding: 25px 28px; background: #eee9df; }
-.artist-information-panel article { display: flex; flex-direction: column; gap: 9px; }
-.artist-information-panel article p { margin: 0; color: hsl(var(--muted-foreground)); font-size: 11px; line-height: 1.7; }
-.artist-information-panel article p.serif { color: hsl(var(--foreground)); font-size: 21px; }
-.artist-information-panel > .sample-disclaimer { grid-column: 1 / -1; border-top: 1px solid hsl(var(--foreground) / .13); margin: 4px 0 0; padding-top: 12px; font-size: 9px; }
-.artist-works-section { padding-top: 84px; }
-.artist-work-count { color: hsl(var(--muted-foreground)); font-size: 9px; padding-bottom: 5px; }
+В своём репозитории GitHub найди папку src, а внутри неё — файл index.css.
 
-.about-hero { min-height: 470px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 8%; }
-.about-title h1 { font-weight: 400; font-size: clamp(67px, 9vw, 112px); line-height: .94; letter-spacing: -.065em; margin: 29px 0 0; }
-.about-intro { max-width: 390px; padding-top: 35px; }
-.large-asterisk { color: hsl(var(--primary)); font-size: 33px; display: block; margin-bottom: 17px; }
-.about-intro p { font-size: 27px; line-height: 1.35; letter-spacing: -.025em; margin: 0 0 28px; }
-.about-intro p::first-letter { color: hsl(var(--primary)); }
-.about-image-band { height: min(62vw, 580px); min-height: 310px; position: relative; overflow: hidden; background: #d2c8bd; }
-.about-image-band img { height: 100%; width: 100%; object-fit: cover; object-position: center 46%; filter: saturate(.83); }
-.image-band-label { position: absolute; bottom: 31px; left: max(48px, calc((100% - 1330px) / 2)); color: #f8f3e9; display: flex; flex-direction: column; gap: 11px; text-shadow: 0 1px 7px #403833; }
-.image-band-label .eyebrow { color: #f8f3e9; }
-.image-band-label .serif { font-size: 30px; }
-.about-values { display: grid; grid-template-columns: .8fr 1.2fr; gap: 14%; padding-top: 112px; padding-bottom: 116px; }
-.about-values h2 { font-size: 53px; font-weight: 400; line-height: 1.04; letter-spacing: -.05em; margin: 20px 0; }
-.value-list { border-top: 1px solid hsl(var(--border)); }
-.value-list article { display: grid; grid-template-columns: 44px 1fr; gap: 14px; padding: 21px 0; border-bottom: 1px solid hsl(var(--border)); }
-.value-no { color: hsl(var(--primary)); font-size: 9px; letter-spacing: .12em; padding-top: 8px; }
-.value-list h3 { font-size: 22px; font-weight: 400; margin: 0 0 6px; }
-.value-list p { color: hsl(var(--muted-foreground)); font-size: 11px; line-height: 1.8; max-width: 390px; margin: 0; }
-.about-status { background: #e9e1d8; }
-.about-status-inner { padding-top: 89px; padding-bottom: 90px; }
-.about-status h2 { font-weight: 400; font-size: clamp(49px, 6vw, 70px); line-height: 1; letter-spacing: -.055em; margin: 23px 0 20px; }
-.about-status p { max-width: 580px; font-size: 12px; line-height: 1.8; color: hsl(var(--muted-foreground)); margin: 0 0 25px; }
+How-to-Create-a-GitHub-Portfolio/README.md at main · katiehuangx/How-to-Create-a-GitHub-Portfolio · GitHub
 
-.detail-page { padding-top: 42px; padding-bottom: 108px; }
-.back-link { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 10px; margin-bottom: 34px; transition: color .2s; }
-.back-link:hover { color: hsl(var(--primary)); }
-.detail-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(310px, .75fr); gap: 9%; align-items: start; }
-.detail-image { position: relative; }
-.detail-image img { display: block; width: 100%; max-height: 720px; aspect-ratio: 4 / 4.9; object-fit: cover; background: #dfd9d1; }
-.detail-image > .eyebrow { display: block; margin-top: 12px; font-size: 8px; }
-.detail-copy { padding-top: 45px; }
-.detail-copy h1 { font-size: clamp(43px, 5vw, 64px); font-weight: 400; letter-spacing: -.055em; line-height: 1.03; margin: 17px 0 9px; }
-.detail-artist { display: inline-flex; align-items: center; gap: 7px; color: hsl(var(--primary)); text-decoration: none; font-size: 12px; }
-.detail-rule { width: 100%; height: 1px; background: hsl(var(--border)); }
-.record-status { display: inline-block; border: 1px solid hsl(var(--border)); padding: 7px 9px; color: hsl(var(--muted-foreground)); font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
-.record-status.sample { color: hsl(var(--primary)); border-color: hsl(var(--primary) / .35); }
-.record-status.verified { color: hsl(var(--foreground)); }
-.detail-facts { margin: 15px 0 18px; }
-.detail-facts div { display: grid; grid-template-columns: 95px 1fr; padding: 10px 0; }
-.detail-facts dt { color: hsl(var(--muted-foreground)); font-size: 10px; }
-.detail-facts dd { margin: 0; font-size: 10px; }
-.sample-field-value { display: inline-block; padding: 4px 7px; background: #eee9df; color: hsl(var(--foreground)); font-size: 9px; }
-.verified-field-value { color: hsl(var(--foreground)); }
-.missing-information { color: hsl(var(--muted-foreground)); font-style: italic; }
-.detail-disclaimer { font-size: 9px; line-height: 1.7; color: hsl(var(--muted-foreground)); margin-top: 14px; }
-.detail-action-note { border-left: 2px solid hsl(var(--primary) / .48); padding: 7px 0 7px 12px; margin: 17px 0 0; color: hsl(var(--muted-foreground)); font-size: 10px; line-height: 1.65; }
-.detail-price-block { display: flex; flex-direction: column; align-items: start; gap: 4px; }
-.detail-price-value { font-size: 13px; }
-.detail-price-label { color: hsl(var(--muted-foreground)); font-size: 8px; letter-spacing: .07em; text-transform: uppercase; }
-.wall-preview-section { margin-top: 100px; padding-top: 39px; border-top: 1px solid hsl(var(--border)); }
-.wall-preview-heading { display: grid; grid-template-columns: 1.1fr .9fr; gap: 9%; align-items: end; margin-bottom: 27px; }
-.wall-preview-heading h2 { font-size: clamp(34px, 4vw, 48px); font-weight: 400; line-height: 1.05; letter-spacing: -.045em; margin: 14px 0 0; }
-.wall-preview-heading p { max-width: 380px; color: hsl(var(--muted-foreground)); font-size: 11px; line-height: 1.75; margin: 0 0 3px; }
-.wall-preview-controls { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 18px; margin-bottom: 11px; background: #eee9df; }
-.preview-setting { display: flex; align-items: center; gap: 13px; }
-.preview-setting-label { color: hsl(var(--muted-foreground)); font-size: 8px; letter-spacing: .13em; text-transform: uppercase; white-space: nowrap; }
-.preview-button-group { display: flex; gap: 3px; }
-.preview-button-group button { border: 1px solid transparent; padding: 7px 10px; background: transparent; color: hsl(var(--muted-foreground)); font: inherit; font-size: 9px; cursor: pointer; transition: color .2s, border-color .2s, background .2s; }
-.preview-button-group button:hover { color: hsl(var(--primary)); }
-.preview-button-group button.selected { color: hsl(var(--primary)); border-color: hsl(var(--primary) / .38); background: hsl(var(--background) / .68); }
-.room-mockup { position: relative; isolation: isolate; overflow: hidden; height: clamp(340px, 43vw, 515px); background: linear-gradient(110deg, #e7ddcc 0%, #eee8dd 42%, #e6ddcf 100%); }
-.room-mockup::before { content: ''; position: absolute; z-index: 0; inset: 5.5% 4% 18%; border: 1px solid rgb(255 255 255 / .56); box-shadow: inset 0 0 0 17px rgb(255 255 255 / .09), inset 0 0 0 18px rgb(255 255 255 / .25), inset 0 0 0 33px rgb(255 255 255 / .06), inset 0 0 0 34px rgb(255 255 255 / .2); pointer-events: none; }
-.room-mockup::after { content: ''; position: absolute; z-index: 0; left: 4%; right: 4%; bottom: 18%; height: 7px; border-top: 1px solid rgb(255 255 255 / .55); border-bottom: 1px solid rgb(142 122 101 / .18); }
-.room-sunwash { position: absolute; z-index: 0; top: 0; left: 7%; width: 36%; height: 83%; background: linear-gradient(118deg, rgb(255 255 255 / .27), transparent 74%); clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%); }
-.room-floor { position: absolute; z-index: 1; inset: auto 0 0; height: 18%; background: linear-gradient(180deg, #c9b9a3 0%, #bca98f 100%); }
-.room-floor::before { content: ''; position: absolute; inset: 0; opacity: .35; background: repeating-linear-gradient(90deg, transparent 0 12%, rgb(109 87 66 / .23) 12.1% 12.25%, transparent 12.35% 25%); }
-.room-console { position: absolute; z-index: 2; left: 20%; bottom: 15%; width: 60%; height: 6%; background: #8c7563; box-shadow: 0 8px 13px rgb(66 49 38 / .18); }
-.room-console::before { content: ''; position: absolute; inset: -5px -5px auto; height: 5px; background: #a48a75; }
-.room-console span { position: absolute; top: 100%; width: 4px; height: 21px; background: #735f50; }
-.room-console span:first-child { left: 7%; }
-.room-console span:last-child { right: 7%; }
-.room-plant { position: absolute; z-index: 2; right: 10%; bottom: 18%; width: 7%; height: 23%; }
-.room-plant i { position: absolute; bottom: 28%; left: 43%; width: 28%; height: 55%; border-radius: 100% 0 100% 0; background: #77816b; transform-origin: bottom center; }
-.room-plant i:nth-child(1) { transform: rotate(-47deg); }
-.room-plant i:nth-child(2) { transform: rotate(-23deg); height: 68%; }
-.room-plant i:nth-child(3) { transform: rotate(8deg); height: 74%; }
-.room-plant i:nth-child(4) { transform: rotate(32deg); height: 61%; }
-.room-plant i:nth-child(5) { transform: rotate(55deg); height: 49%; }
-.room-plant b { position: absolute; left: 23%; right: 23%; bottom: 0; height: 28%; background: #a98770; clip-path: polygon(7% 0, 93% 0, 78% 100%, 22% 100%); }
-.room-sofa { position: absolute; z-index: 3; left: 22.5%; bottom: 10%; width: 55%; height: 25%; }
-.room-sofa-back { position: absolute; z-index: 1; left: 7%; right: 7%; top: 2%; height: 61%; border-radius: 34px 34px 12px 12px; background: #b5a99a; box-shadow: inset 0 8px 13px rgb(255 255 255 / .18); }
-.room-sofa-seat { position: absolute; z-index: 2; left: 1%; right: 1%; bottom: 5%; height: 43%; border-radius: 18px 18px 10px 10px; background: #a99b8c; box-shadow: inset 0 4px 7px rgb(255 255 255 / .16), 0 7px 12px rgb(62 49 39 / .15); }
-.room-sofa-arm { position: absolute; z-index: 3; top: 20%; width: 14%; height: 65%; border-radius: 20px 20px 7px 7px; background: #c0b3a4; }
-.room-sofa-arm.left { left: 0; }
-.room-sofa-arm.right { right: 0; }
-.room-sofa-cushion { position: absolute; z-index: 4; top: 23%; width: 18%; height: 34%; border-radius: 6px 12px 5px 12px; background: #d5c7b3; box-shadow: 0 3px 5px rgb(62 49 39 / .1); }
-.room-sofa-cushion.one { left: 22%; transform: rotate(-4deg); }
-.room-sofa-cushion.two { right: 22%; background: #c6b4a0; transform: rotate(4deg); }
-.room-sofa-leg { position: absolute; z-index: 0; bottom: -3%; width: 7px; height: 12%; background: #715e4c; }
-.room-sofa-leg.left { left: 7%; }
-.room-sofa-leg.right { right: 7%; }
-.room-art-placement { position: absolute; z-index: 4; top: 8%; left: 0; right: 0; display: flex; justify-content: center; }
-.room-art-frame { width: 19%; aspect-ratio: var(--preview-ratio, 1); padding: clamp(6px, 1vw, 12px); background: linear-gradient(135deg, #7d5e49, #b08d69 26%, #705341 52%, #a17c5f 78%, #684b3a); box-shadow: 0 12px 27px rgb(47 37 30 / .23), 0 2px 4px rgb(47 37 30 / .2); transition: width .35s ease; }
-.room-mockup.scale-small .room-art-frame { width: 15%; }
-.room-mockup.scale-large .room-art-frame { width: 23%; }
-.room-art-mat { width: 100%; height: 100%; padding: clamp(4px, .65vw, 8px); background: #f6f1e8; box-shadow: inset 0 0 0 1px rgb(81 65 51 / .14); }
-.room-art-mat img { display: block; width: 100%; height: 100%; object-fit: contain; background: #e8e0d3; }
-.room-mockup-mark { position: absolute; z-index: 5; bottom: 13px; left: 17px; color: rgb(52 45 40 / .62); font-size: 7px; letter-spacing: .16em; text-transform: uppercase; }
-.room-reading { background: linear-gradient(110deg, #dfded1 0%, #ebe7dc 44%, #dedbce 100%); }
-.room-reading .room-floor { background: linear-gradient(180deg, #c9c0ae 0%, #b6a991 100%); }
-.room-reading .room-sofa { left: 15%; width: 50%; }
-.room-reading .room-sofa-back, .room-reading .room-sofa-seat { background-color: #aaa99a; }
-.room-reading .room-console { left: 55%; width: 27%; background: #8d8170; }
-.room-reading .room-plant { right: 9%; }
-.wall-preview-footnote { display: flex; justify-content: space-between; gap: 16px; padding-top: 12px; color: hsl(var(--muted-foreground)); font-size: 8px; letter-spacing: .045em; }
-.related-section { padding-top: 105px; }
-.related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 790px; }
-.missing-art { padding-top: 120px; padding-bottom: 170px; }
-.missing-art h1 { font-size: 64px; font-weight: 400; line-height: 1; letter-spacing: -.05em; margin: 20px 0 28px; }
-.missing-art .text-link { flex-direction: row-reverse; }
+2. Вставь код
 
-@media (max-width: 980px) {
-  .page-wrap { width: min(100% - 56px, 900px); }
-  .home-hero { min-height: 590px; grid-template-columns: .9fr 1.1fr; }
-  .home-hero h1 { font-size: clamp(62px, 8vw, 82px); }
-  .hero-art-wrap { height: 450px; width: 96%; margin-right: 1%; }
-  .hero-side-note { right: -16px; }
-  .intro-inner { grid-template-columns: .75fr 2fr auto; gap: 25px; }
-  .footer-main { gap: 5%; }
-  .detail-layout { gap: 6%; }
-  .wall-preview-heading { gap: 5%; }
-  .wall-preview-controls { align-items: flex-start; flex-direction: column; }
+Если хочешь заменить содержимое файла, сначала сохрани старую версию на всякий случай. Затем вставь новый код целиком.
+
+Making Good PRs: Basic Pull Requests
+
+3. Сохрани изменения
+
+Нажми Commit changes…, подтверди сохранение. После этого изменения будут записаны в репозиторий.
+
+Важное исправление в твоём коде
+Найди этот участок:
+
+.wall-preview-plant i(1) { transform: rotate(-48deg); }
+.wall-preview-plant i(2) { transform: rotate(-24deg); height: 75%; }
+.wall-preview-plant i(3) { transform: rotate(10deg); height: 82%; }
+.wall-preview-plant i(4) { transform: rotate(35deg); height: 68%; }
+.wall-preview-plant i(5) { transform: rotate(55deg); height: 55%; }
+
+Замени его на:
+
+.wall-preview-plant i:nth-child(1) { transform: rotate(-48deg); }
+.wall-preview-plant i:nth-child(2) { transform: rotate(-24deg); height: 75%; }
+.wall-preview-plant i:nth-child(3) { transform: rotate(10deg); height: 82%; }
+.wall-preview-plant i:nth-child(4) { transform: rotate(35deg); height: 68%; }
+.wall-preview-plant i:nth-child(5) { transform: rotate(55deg); height: 55%; }
+
+И ещё исправь две строки для книжной полки:
+
+.wall-preview-bookshelf i:nth-child(2n) {
+  width: 75%;
+  background: #c5ad91;
 }
-@media (max-width: 760px) {
-  .page-wrap { width: min(100% - 40px, 600px); }
-  .site-header { height: 72px; }
-  .wordmark-name { font-size: 25px; }
-  .wordmark-caption { font-size: 7px; }
-  .mobile-menu { display: block; cursor: pointer; position: relative; z-index: 12; }
-  .main-nav { display: none; position: absolute; top: 71px; left: 0; right: 0; height: auto; padding: 20px 20px 24px; background: hsl(var(--background)); border-bottom: 1px solid hsl(var(--border)); flex-direction: column; align-items: stretch; gap: 4px; }
-  .main-nav.is-open { display: flex; }
-  .nav-link { padding: 13px 0; }
-  .nav-link::after { display: none; }
-  .nav-inquire { justify-content: space-between; margin-top: 9px; }
-  .home-hero { display: flex; flex-direction: column; align-items: stretch; padding-top: 45px; padding-bottom: 68px; min-height: auto; }
-  .hero-text { padding: 0; }
-  .home-hero h1 { font-size: clamp(65px, 15vw, 91px); margin-top: 26px; margin-bottom: 17px; }
-  .hero-deck { font-size: 13px; max-width: 290px; }
-  .hero-footnote { position: static; order: 2; margin-top: 25px; }
-  .hero-art-wrap { width: calc(100% - 13px); height: auto; aspect-ratio: 4 / 4.15; margin: 37px 0 0 auto; }
-  .hero-art-caption { left: -12px; bottom: 15px; padding: 12px 13px; min-width: 190px; gap: 10px; }
-  .caption-title { font-size: 13px; }
-  .caption-sub { font-size: 8px; }
-  .hero-side-note { right: -10px; }
-  .hero-index { bottom: 20px; right: auto; left: 0; font-size: 11px; }
-  .intro-inner { min-height: 220px; padding-top: 28px; padding-bottom: 28px; display: grid; grid-template-columns: 1fr auto; gap: 15px; }
-  .intro-inner > .eyebrow { margin: 0; grid-column: 1 / -1; }
-  .intro-inner p { grid-column: 1; font-size: 27px; }
-  .circle-link { width: 38px; height: 38px; }
-  .featured-section { padding-top: 73px; padding-bottom: 78px; }
-  .section-heading { align-items: end; gap: 15px; margin-bottom: 26px; }
-  .section-heading h2 { font-size: 34px; }
-  .section-heading > .text-link { font-size: 9px; gap: 7px; white-space: nowrap; }
-  .art-grid, .discover-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 13px; row-gap: 34px; }
-  .home-grid .art-card:nth-child(3) { display: none; }
-  .art-card-image { aspect-ratio: 4 / 5; }
-  .art-card-copy { display: block; padding-top: 12px; }
-  .art-title { font-size: 17px; line-height: 1.2; }
-  .art-artist { font-size: 10px; }
-  .art-price { align-items: flex-start; text-align: left; margin-top: 9px; }
-  .art-price-value { font-size: 10px; }
-  .art-price-label { font-size: 7px; }
-  .artist-teaser { padding: 67px 0 70px; }
-  .teaser-inner { display: block; }
-  .teaser-copy h2 { font-size: 47px; }
-  .teaser-artists { margin-top: 43px; }
-  .artist-line { grid-template-columns: 28px 1fr 80px 17px; padding: 15px 0; }
-  .artist-line-name { font-size: 19px; }
-  .artist-line-type { font-size: 9px; }
-  .closing-invite { padding-top: 75px; padding-bottom: 90px; }
-  .closing-invite h2 { font-size: clamp(53px, 12vw, 70px); }
-  .closing-mark { font-size: 250px; bottom: -78px; right: -5%; }
-  .site-footer { padding-top: 46px; }
-  .footer-main { grid-template-columns: 1fr 1fr; gap: 33px 20px; padding-bottom: 38px; }
-  .footer-brand { grid-column: 1 / -1; }
-  .footer-brand p { font-size: 15px; margin: 12px 0 0; }
-  .footer-bottom { gap: 15px; font-size: 8px; }
-  .inner-page { padding-top: 66px; padding-bottom: 78px; }
-  .page-heading { padding-bottom: 35px; }
-  .page-heading h1 { font-size: clamp(54px, 12vw, 74px); margin-top: 20px; }
-  .collection-toolbar { flex-direction: column-reverse; align-items: stretch; padding: 13px 0; gap: 10px; }
-  .search-box { width: 100%; }
-  .category-tabs { overflow-x: auto; }
-  .filter-chip { white-space: nowrap; padding: 8px 10px; }
-  .catalog-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; padding-bottom: 11px; }
-  .catalog-select-label { justify-content: space-between; gap: 6px; }
-  .catalog-select-label select { min-width: 0; max-width: 70%; }
-  .clear-catalog { grid-column: 1 / -1; justify-self: start; }
-  .results-line { margin: 19px 0; font-size: 8px; }
-  .discover-grid { row-gap: 29px; }
-  .sample-disclaimer { margin-top: 38px; }
-  .artist-page-heading { padding-bottom: 41px; }
-  .artist-directory { grid-template-columns: 1fr; row-gap: 37px; }
-  .artist-profile:nth-child(even) { margin-top: 0; }
-  .artist-image-link, .artist-profile:nth-child(2) .artist-image-link, .artist-profile:nth-child(3) .artist-image-link { height: auto; aspect-ratio: 4 / 3.4; }
-  .artist-profile-copy h2 { font-size: 27px; }
-  .artist-footnote { grid-template-columns: 1fr; gap: 12px; margin-top: 57px; }
-  .artist-detail-page { padding-top: 28px; }
-  .artist-detail-heading h1 { font-size: clamp(48px, 12vw, 68px); margin: 18px 0 22px; }
-  .artist-information-panel { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
-  .artist-information-panel > .sample-disclaimer { grid-column: 1; }
-  .artist-works-section { padding-top: 60px; }
-  .artist-work-count { display: none; }
-  .about-hero { display: block; min-height: auto; padding-top: 64px; padding-bottom: 57px; }
-  .about-title h1 { font-size: clamp(68px, 16vw, 92px); }
-  .about-intro { margin-left: auto; margin-top: 38px; padding: 0; }
-  .about-intro p { font-size: 23px; }
-  .about-image-band { height: 72vw; min-height: 280px; }
-  .image-band-label { left: 20px; bottom: 20px; }
-  .image-band-label .serif { font-size: 23px; }
-  .about-values { display: block; padding-top: 69px; padding-bottom: 74px; }
-  .about-values h2 { font-size: 44px; }
-  .value-list { margin-top: 35px; }
-  .about-status-inner { padding-top: 63px; padding-bottom: 67px; }
-  .about-status h2 { font-size: 52px; }
-  .detail-page { padding-top: 28px; padding-bottom: 70px; }
-  .back-link { margin-bottom: 22px; }
-  .detail-layout { display: flex; flex-direction: column; gap: 26px; }
-  .detail-image img { aspect-ratio: 4 / 4.8; }
-  .detail-copy { padding-top: 3px; width: 100%; }
-  .detail-copy h1 { font-size: 46px; }
-  .wall-preview-section { margin-top: 69px; padding-top: 27px; }
-  .wall-preview-heading { display: block; margin-bottom: 19px; }
-  .wall-preview-heading h2 { font-size: 36px; }
-  .wall-preview-heading p { margin-top: 12px; }
-  .wall-preview-controls { gap: 13px; padding: 13px; }
-  .preview-setting { align-items: flex-start; flex-direction: column; gap: 6px; }
-  .preview-button-group button { padding: 7px 8px; font-size: 8px; }
-  .room-mockup { height: clamp(300px, 93vw, 415px); }
-  .room-art-frame { padding: 6px; }
-  .room-mockup.scale-small .room-art-frame { width: 30%; }
-  .room-mockup.scale-medium .room-art-frame { width: 38%; }
-  .room-mockup.scale-large .room-art-frame { width: 46%; }
-  .wall-preview-footnote { flex-direction: column; gap: 5px; }
-  .related-section { padding-top: 70px; }
-  .related-grid { max-width: none; }
+
+.wall-preview-bookshelf i:nth-child(3n) {
+  width: 90%;
+  background: #d5c0a5;
 }
-@media (max-width: 380px) {
-  .page-wrap { width: calc(100% - 32px); }
-  .hero-kicker { font-size: 8px; }
-  .home-hero h1 { font-size: 61px; }
-  .art-title { font-size: 15px; }
-  .artist-line { grid-template-columns: 22px 1fr 66px 16px; gap: 7px; }
-  .artist-line-name { font-size: 17px; }
-  .artist-line-type { font-size: 8px; }
+
+Обрати внимание: твой код содержит два набора стилей для .wall-preview-section и .wall-preview-controls. Они могут конфликтовать, поэтому пока не заменяй весь файл вслепую.
+
+Если твоя цель — полностью запустить новый предпросмотр картины, пришли ещё код src/App.tsx. Я помогу согласовать оба файла, чтобы тебе не пришлось самостоятельно искать ошибки.
+
+Это также может вас заинтересовать.
+
+
+
+напиши новый код я заменю полностью
+Конечно! Ниже новый код для src/index.css. Полностью замени старый код в файле src/index.css этим кодом. Я оставил базовые стили сайта и исправил ошибки в CSS для предпросмотра картины на стене.
+
+/* ================================
+   ОСНОВНЫЕ СТИЛИ САЙТА
+================================ */
+
+* {
+  box-sizing: border-box;
 }
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #292522;
+  background: #faf8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ================================
+   СЕКЦИЯ ПРЕДПРОСМОТРА НА СТЕНЕ
+================================ */
+
+.wall-preview-section {
+  width: 100%;
+  padding: 64px 24px;
+  background: #faf8f5;
+  color: #292522;
+}
+
+.wall-preview-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wall-preview-header {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.wall-preview-eyebrow {
+  margin: 0 0 12px;
+  color: #9b795c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.wall-preview-title {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.wall-preview-description {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #716a63;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ================================
+   ОБЛАСТЬ СТЕНЫ
+================================ */
+
+.wall-preview-stage {
+  position: relative;
+  display: flex;
+  min-height: 440px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 48px 24px;
+  border: 1px solid #e8e0d7;
+  border-radius: 4px;
+  background-color: #e8dfd3;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(110, 83, 59, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 5px 5px, 100% 4px;
+}
+
+.wall-preview-stage::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  background: #c8b8a6;
+  content: "";
+}
+
+.wall-preview-stage::after {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  height: 2px;
+  background: rgba(83, 62, 45, 0.15);
+  content: "";
+}
+
+/* ================================
+   КАРТИНА
+================================ */
+
+.wall-preview-artwork {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(54%, 390px);
+  aspect-ratio: 3 / 4;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: #f6f0e7;
+  border: 1px solid #d4c5b4;
+  box-shadow:
+    0 4px 8px rgba(45, 33, 24, 0.12),
+    0 18px 32px rgba(45, 33, 24, 0.18);
+  transition:
+    width 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.wall-preview-artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wall-preview-artwork-frame {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: 1px solid #b49a7c;
+  background: #fffaf2;
+}
+
+.wall-preview-artwork-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Размеры картины */
+
+.wall-preview-artwork.size-small {
+  width: min(34%, 250px);
+}
+
+.wall-preview-artwork.size-medium {
+  width: min(46%, 330px);
+}
+
+.wall-preview-artwork.size-large {
+  width: min(58%, 420px);
+}
+
+/* ================================
+   ДЕКОРАТИВНЫЕ РАСТЕНИЯ
+================================ */
+
+.wall-preview-plant {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 5%;
+  width: 100px;
+  height: 180px;
+  pointer-events: none;
+}
+
+.wall-preview-plant i {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 65px;
+  border-radius: 100% 0 100% 0;
+  background: #64775a;
+  transform-origin: bottom center;
+}
+
+.wall-preview-plant i:nth-child(1) {
+  bottom: 20px;
+  left: 30px;
+  transform: rotate(-35deg);
+}
+
+.wall-preview-plant i:nth-child(2) {
+  bottom: 55px;
+  left: 10px;
+  transform: rotate(-55deg);
+}
+
+.wall-preview-plant i:nth-child(3) {
+  bottom: 70px;
+  left: 43px;
+  transform: rotate(30deg);
+}
+
+.wall-preview-plant i:nth-child(4) {
+  bottom: 100px;
+  left: 20px;
+  transform: rotate(-45deg);
+}
+
+.wall-preview-plant i:nth-child(5) {
+  bottom: 115px;
+  left: 48px;
+  transform: rotate(35deg);
+}
+
+.wall-preview-plant::after {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 65px;
+  height: 48px;
+  border-radius: 4px 4px 16px 16px;
+  background: #b77f58;
+  content: "";
+}
+
+/* ================================
+   ДЕКОРАТИВНАЯ КНИЖНАЯ ПОЛКА
+================================ */
+
+.wall-preview-bookshelf {
+  position: absolute;
+  right: 5%;
+  bottom: 10px;
+  z-index: 1;
+  display: flex;
+  width: 150px;
+  height: 95px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 10px 10px;
+  border-bottom: 7px solid #a77b56;
+  pointer-events: none;
+}
+
+.wall-preview-bookshelf i {
+  display: block;
+  width: 18px;
+  height: 58px;
+  border-radius: 2px 2px 0 0;
+  background: #8e7563;
+}
+
+.wall-preview-bookshelf i:nth-child(2n) {
+  height: 70px;
+  background: #c29b72;
+}
+
+.wall-preview-bookshelf i:nth-child(3n) {
+  height: 48px;
+  background: #78816b;
+}
+
+/* ================================
+   ПАНЕЛЬ УПРАВЛЕНИЯ
+================================ */
+
+.wall-preview-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #e8e0d7;
+  border-radius: 4px;
+  background: #fffdfa;
+}
+
+.wall-preview-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.wall-preview-control label,
+.wall-preview-label {
+  color: #4a4038;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wall-preview-control select,
+.wall-preview-control input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #d9cec2;
+  border-radius: 3px;
+  outline: none;
+  background: #fff;
+  color: #292522;
+}
+
+.wall-preview-control select:focus,
+.wall-preview-control input:focus {
+  border-color: #9b795c;
+  box-shadow: 0 0 0 2px rgba(155, 121, 92, 0.12);
+}
+
+.wall-preview-control input[type="range"] {
+  min-height: auto;
+  padding: 0;
+  accent-color: #9b795c;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.wall-preview-range-value {
+  color: #8a6a4f;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================================
+   КНОПКИ
+================================ */
+
+.wall-preview-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border: 1px solid #292522;
+  border-radius: 3px;
+  background: #292522;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.wall-preview-button:hover {
+  border-color: #8a6a4f;
+  background: #8a6a4f;
+}
+
+.wall-preview-button-secondary {
+  border-color: #d9cec2;
+  background: transparent;
+  color: #292522;
+}
+
+.wall-preview-button-secondary:hover {
+  border-color: #292522;
+  background: #292522;
+  color: #fff;
+}
+
+.wall-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ================================
+   ПОДСКАЗКА
+================================ */
+
+.wall-preview-note {
+  margin: 18px auto 0;
+  color: #82776c;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ================================
+   АДАПТИВНОСТЬ: ПЛАНШЕТЫ
+================================ */
+
+@media (max-width: 768px) {
+  .wall-preview-section {
+    padding: 48px 18px;
+  }
+
+  .wall-preview-stage {
+    min-height: 360px;
+    padding: 36px 16px;
+  }
+
+  .wall-preview-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .wall-preview-plant {
+    left: 1%;
+    transform: scale(0.8);
+    transform-origin: bottom left;
+  }
+
+  .wall-preview-bookshelf {
+    right: 1%;
+    transform: scale(0.8);
+    transform-origin: bottom right;
+  }
+}
+
+/* ================================
+   АДАПТИВНОСТЬ: ТЕЛЕФОНЫ
+================================ */
+
+@media (max-width: 480px) {
+  .wall-preview-section {
+    padding: 36px 14px;
+  }
+
+  .wall-preview-header {
+    margin-bottom: 24px;
+  }
+
+  .wall-preview-title {
+    font-size: 32px;
+  }
+
+  .wall-preview-description {
+    font-size: 14px;
+  }
+
+  .wall-preview-stage {
+    min-height: 300px;
+    padding: 30px 12px;
+  }
+
+  .wall-preview-artwork {
+    width: 58%;
+    padding: 7px;
+  }
+
+  .wall-preview-artwork.size-small {
+    width: 40%;
+  }
+
+  .wall-preview-artwork.size-medium {
+    width: 50%;
+  }
+
+  .wall-preview-artwork.size-large {
+    width: 62%;
+  }
+
+  .wall-preview-artwork-frame {
+    padding: 5px;
+  }
+
+  .wall-preview-plant {
+    transform: scale(0.55);
+  }
+
+  .wall-preview-bookshelf {
+    transform: scale(0.55);
+  }
+
+  .wall-preview-controls {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .wall-preview-actions {
+    flex-direction: column;
+  }
+
+  .wall-preview-button {
+    width: 100%;
+  }
+}
+
+/* ================================
+   ДОСТУПНОСТЬ
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+Важно: этот CSS задаёт внешний вид, но сам по себе не создаёт работающий предпросмотр. Чтобы изменение размера картины, загрузка изображений и элементы управления действительно работали, в src/App.tsx должен быть соответствующий React-компонент с такими же CSS-классами.
+
+После замены сохрани файл и сделай Commit changes на GitHub. Если после этого страница выглядит неправильно, пришли код src/App.tsx — я подготовлю согласованный вариант для обоих файлов.
+
+Для замены кода можно рассмотреть один вариант веб-дизайна на заказ.
+
+
+
+это тоже писать в коде ? у меня сайт на английском должен быьть /* ================================
+   ОСНОВНЫЕ СТИЛИ САЙТА
+================================ */
+Нет, всё хорошо 😊 Это комментарий для разработчика, он не отображается на сайте.
+
+Но раз сайт у тебя на английском, можешь заменить его на английский:
+
+/* ================================
+   MAIN WEBSITE STYLES
+================================ */
+
+Важно: комментарии на русском внутри CSS не повлияют на язык сайта, но сами тексты, которые посетители видят на странице, должны быть на английском — их нужно менять в src/App.tsx или другом файле с текстами сайта.
+
+Можешь оставить комментарии на русском или перевести их на английский — CSS будет работать одинаково.
+
+Это также может вас заинтересовать.
+
+
+
+мне нужен просто код полностью
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #292522;
+  background: #faf8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.wall-preview-section {
+  width: 100%;
+  padding: 64px 24px;
+  background: #faf8f5;
+  color: #292522;
+}
+
+.wall-preview-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wall-preview-header {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.wall-preview-eyebrow {
+  margin: 0 0 12px;
+  color: #9b795c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.wall-preview-title {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.wall-preview-description {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #716a63;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.wall-preview-stage {
+  position: relative;
+  display: flex;
+  min-height: 440px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 48px 24px;
+  border: 1px solid #e8e0d7;
+  border-radius: 4px;
+  background-color: #e8dfd3;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(110, 83, 59, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 5px 5px, 100% 4px;
+}
+
+.wall-preview-stage::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  background: #c8b8a6;
+  content: "";
+}
+
+.wall-preview-stage::after {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  height: 2px;
+  background: rgba(83, 62, 45, 0.15);
+  content: "";
+}
+
+.wall-preview-artwork {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(54%, 390px);
+  aspect-ratio: 3 / 4;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: #f6f0e7;
+  border: 1px solid #d4c5b4;
+  box-shadow:
+    0 4px 8px rgba(45, 33, 24, 0.12),
+    0 18px 32px rgba(45, 33, 24, 0.18);
+  transition:
+    width 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.wall-preview-artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wall-preview-artwork-frame {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: 1px solid #b49a7c;
+  background: #fffaf2;
+}
+
+.wall-preview-artwork-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wall-preview-artwork.size-small {
+  width: min(34%, 250px);
+}
+
+.wall-preview-artwork.size-medium {
+  width: min(46%, 330px);
+}
+
+.wall-preview-artwork.size-large {
+  width: min(58%, 420px);
+}
+
+.wall-preview-plant {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 5%;
+  width: 100px;
+  height: 180px;
+  pointer-events: none;
+}
+
+.wall-preview-plant i {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 65px;
+  border-radius: 100% 0 100% 0;
+  background: #64775a;
+  transform-origin: bottom center;
+}
+
+.wall-preview-plant i:nth-child(1) {
+  bottom: 20px;
+  left: 30px;
+  transform: rotate(-35deg);
+}
+
+.wall-preview-plant i:nth-child(2) {
+  bottom: 55px;
+  left: 10px;
+  transform: rotate(-55deg);
+}
+
+.wall-preview-plant i:nth-child(3) {
+  bottom: 70px;
+  left: 43px;
+  transform: rotate(30deg);
+}
+
+.wall-preview-plant i:nth-child(4) {
+  bottom: 100px;
+  left: 20px;
+  transform: rotate(-45deg);
+}
+
+.wall-preview-plant i:nth-child(5) {
+  bottom: 115px;
+  left: 48px;
+  transform: rotate(35deg);
+}
+
+.wall-preview-plant::after {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 65px;
+  height: 48px;
+  border-radius: 4px 4px 16px 16px;
+  background: #b77f58;
+  content: "";
+}
+
+.wall-preview-bookshelf {
+  position: absolute;
+  right: 5%;
+  bottom: 10px;
+  z-index: 1;
+  display: flex;
+  width: 150px;
+  height: 95px;
+  align-items: flex-end;
+  justify-content: center;
+
+
+
+⋮⋮⋮⋮⋮⋮⋮⋮
