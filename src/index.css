@@ -1,123 +1,14 @@
 
-Gemini
+/* MAROWNIE Art — premium gallery design */
 
-Новый чат
-Библиотека
-Запланировано
-Настройка
-Новый блокнот
-Untitled notebook
-ТЗ для сайта арт-галереи
-Создание обложки сайта Tilda
-LLC and Franchise Law Quiz Answers
-Wage vs. Salary: Различия в оплате труда
-Employment Law Quiz Answers
-Ohlm Company Note Transactions Journal Entries
-Payroll Tax Computations for BMX Company
-Payroll Journal Entries and Table
-Accounts Receivable Realizable Value Calculation
-Professor's Confidence in Student
-снегнерируй картинку контур карты Техаса , а внутри карты восточные орнаменты , таким образом намекая на восточную тематику картинки которая будет использоваться в рекламе ресторана узбекской кухни
-Рабочий лист: Развитие навыков рифмовки
-Учим рифмы: задание для детей
-Объяснение задания на рифмы
-Чат с Gemini
-джимини ты можешь объяснить словами дизайнеру и программисиу какой я хочу сайт. с какими менб ты можешь мне помочь создать арт сайт у меня уже есть https://github.com/marownieshop/marownie-art-gallery?utm.
-marownieshop
-Update index.css
-b7a22ee
- · 22 minutes ago
-History
-
-9 Commits
-Folders and files
-Name
-public
-Upload Marownie Art Gallery website files
-2 hours ago
-
-src
-Update index.css
-22 minutes ago
-
-index.html
-Update index.html
-2 hours ago
-
-package.json
-Update package.json
-1 hour ago
-
-tsconfig.json
-Create tsconfig.json
-1 hour ago
-
-vite.config.ts
-Create vite.config.ts
-2 hours ago
-
-Repository files navigation
-
-README
-Конечно! Я с удовольствием помогу тебе сформулировать четкое описание проекта для команды. Основываясь на твоем репозитории marownie-art-gallery и макете на скриншоте, вот готовое техническое описание и концепция сайта, которые ты можешь передать дизайнеру и программисту.
-
-🎨 Описание для Дизайнера (UI/UX Brief)
-Общий стиль и атмосфера: Премиальный, элегантный и «воздушный» интернет-магазин произведений искусства (Art Gallery & E-commerce). Интерфейс должен вызывать ассоциации с дорогой галереей или уютным дизайнерским интерьером.
-
-Цветовая палитра: Теплые нейтральные оттенки — кремовый, бежевый, цвет слоновой кости, мягкие оливковые и серо-коричневые тона (taupe). Текст выполнен в глубоком темно-сером или графитовом цвете (не чисто черный) для мягкости восприятия.
-
-Ключевой интерактивный блок («See Art in Your Space»):
-
-Главная фишка страницы — интерактивный визуализатор картины в интерьере.
-
-Блок выбора комнат (Living Room, Bedroom, Office, Dining Room) с превью-миниатюрами внизу главной зоны просмотра.
-
-Панель конфигурации товара справа, разбитая на понятные шаги:
-
-Choose size (выбор размера с актуальной ценой для каждого варианта).
-
-Choose material (Fine Art Paper, Canvas, Framed Print).
-
-Choose frame (варианты рам: Natural Oak, Black, White, Gold с визуальными иконками).
-
-Шапка и навигация: Минималистичный логотип «MAROWNIE Art», ссылки на разделы (Home, Gallery, Collections, About) и функциональные иконки в правой части (Поиск, Избранное/Wishlist, Корзина).
-
-💻 Описание для Программиста (Technical Brief)
-Стек технологий: React, TypeScript, Vite (судя по структуре файлов в репозитории: package.json, vite.config.ts, tsconfig.json, папки src и public).   
-JPG
-
-Архитектура и логика компонентов:
-
-Конфигуратор продукта (Product Customizer): Интерактивная связь между выбранными опциями (размер, материал, рама) и итоговой ценой товара. При клике на переключатели состояние компонента должно мгновенно обновлять цену (например, с $39 на $59) и менять визуальное отображение в превью.
-
-Переключатель комнат (Room Context / Gallery View): Компонент смены фонового изображения интерьера (гостиная, спальня, офис, столовая) при клике на соответствующие миниатюры под главным экраном.
-
-Управление состоянием (State Management): Реализация логики добавления товара в корзину (Add to Cart) с учетом выбранных пользователем параметров (размер, материал, рама), а также работа со списком желаний (Save to Wishlist).
-
-Адаптивность (Responsive Design): Корректное поведение интерфейса на мобильных устройствах, планшетах и десктопах (особенно для правой панели конфигурации и переключателей комнат).
-
-🛠️ Чем я (Джимины) могу помочь в создании этого сайта?
-Я могу подключиться к работе на любом этапе и помочь тебе и твоей команде со следующими задачами:
-
-Написание кода компонентов: Помочь написать компоненты на React и TypeScript для интерактивного конфигуратора картинок, панели выбора рам/размеров и переключателя комнат.
-
-Верстка и стилизация: Помочь настроить стили (CSS/Tailwind) для достижения того самого теплого галерейного премиум-дизайна, как на макете.
-
-Логика корзины и состояния: Написать логику для динамического пересчета цен и сохранения выбранных опций товара.
-
-Контент и тексты: Помочь составить описания для картин (например, для Tuscan Sunset), разделов «About» или «Collections».
-
-С чего бы тебе хотелось начать разработку или какую часть кода/дизайна нужно разобрать первой?
-
-```css
-{
+* {
   box-sizing: border-box;
 }
 
 :root {
-  font-family: Inter, Arial, sans-serif;
-  color: #292522;
-  background: #faf8f5;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  color: #302b26;
+  background: #f8f6f2;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -135,14 +26,18 @@ body {
 }
 
 button,
-input,
-select,
-textarea {
+input {
   font: inherit;
 }
 
 button {
   cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #9a795b;
+  outline-offset: 3px;
 }
 
 img {
@@ -159,442 +54,540 @@ a {
   min-height: 100vh;
 }
 
-.wall-preview-section {
-  width: 100%;
-  padding: 64px 24px;
-  background: #faf8f5;
-  color: #292522;
+/* Header */
+
+.header {
+  min-height: 88px;
+  padding: 22px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: #fbf9f5;
+  border-bottom: 1px solid #eae4dc;
 }
 
-.wall-preview-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.wall-preview-header {
-  max-width: 760px;
-  margin: 0 auto 36px;
-  text-align: center;
-}
-
-.wall-preview-eyebrow {
-  margin: 0 0 12px;
-  color: #9b795c;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.wall-preview-title {
-  margin: 0 0 16px;
+.logo {
+  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: 25px;
   font-weight: 400;
-  line-height: 1.12;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
 }
 
-.wall-preview-description {
-  max-width: 600px;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav a {
+  color: #62594f;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #a17b57;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  font-size: 19px;
+  color: #38312b;
+}
+
+/* Main content */
+
+.main-container {
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
-  color: #716a63;
-  font-size: 15px;
+  padding: 42px 5% 70px;
+}
+
+.section-header {
+  margin-bottom: 34px;
+}
+
+.page-title {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 3.2vw, 46px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+.page-subtitle {
+  max-width: 640px;
+  margin: 0;
+  color: #776e64;
+  font-size: 14px;
   line-height: 1.8;
 }
 
-.wall-preview-stage {
+/* Three-column product layout */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.78fr) minmax(300px, 1.65fr) minmax(270px, 1fr);
+  align-items: start;
+  gap: 27px;
+}
+
+/* Artwork information */
+
+.info-card {
+  min-width: 0;
+  padding: 0;
+}
+
+.info-card > img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-bottom: 20px;
+  background: #eee7dd;
+}
+
+.info-card h3 {
+  margin: 0 0 7px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.info-card .artist {
+  margin: 0 0 12px;
+  color: #8a7969;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.info-card .desc {
+  margin: 17px 0;
+  color: #70675d;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.info-card p {
+  line-height: 1.7;
+}
+
+.prints-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #62594f;
+  font-size: 12px;
+}
+
+.prints-list li {
+  margin: 0 0 10px;
+}
+
+/* Room preview */
+
+.scene-container {
   position: relative;
-  display: flex;
-  min-height: 440px;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  min-height: 500px;
   overflow: hidden;
-  padding: 48px 24px;
-  border: 1px solid #e8e0d7;
-  border-radius: 4px;
-  background-color: #e8dfd3;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      rgba(110, 83, 59, 0.035) 1px,
-      transparent 1px
-    );
-  background-size: 5px 5px, 100% 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 14%;
+  background-color: #e6ddd1;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 12px 35px rgba(57, 43, 30, 0.08);
 }
 
-.wall-preview-stage::before {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 10px;
-  background: #c8b8a6;
-  content: "";
-}
-
-.wall-preview-stage::after {
-  position: absolute;
-  right: 0;
-  bottom: 10px;
-  left: 0;
-  height: 2px;
-  background: rgba(83, 62, 45, 0.15);
-  content: "";
-}
-
-.wall-preview-artwork {
+.artwork-on-wall {
   position: relative;
   z-index: 1;
-  display: flex;
-  width: min(54%, 390px);
-  aspect-ratio: 3 / 4;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  background: #f6f0e7;
-  border: 1px solid #d4c5b4;
+  max-width: 70%;
+  padding: 6px;
+  background: #d4b595;
   box-shadow:
-    0 4px 8px rgba(45, 33, 24, 0.12),
-    0 18px 32px rgba(45, 33, 24, 0.18);
-  transition:
-    width 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    0 5px 12px rgba(30, 23, 17, 0.18),
+    0 18px 35px rgba(30, 23, 17, 0.22);
+  transition: border-color 0.2s ease, width 0.2s ease;
 }
 
-.wall-preview-artwork img {
+.artwork-on-wall img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.wall-preview-artwork-frame {
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  border: 1px solid #b49a7c;
-  background: #fffaf2;
-}
-
-.wall-preview-artwork-frame img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 350px;
   object-fit: cover;
 }
 
-.wall-preview-artwork.size-small {
-  width: min(34%, 250px);
+/* Product configurator */
+
+.configurator {
+  min-width: 0;
+  padding: 25px 22px;
+  background: #fcfbf8;
+  border: 1px solid #e9e2d9;
 }
 
-.wall-preview-artwork.size-medium {
-  width: min(46%, 330px);
+.config-section {
+  margin-bottom: 25px;
 }
 
-.wall-preview-artwork.size-large {
-  width: min(58%, 420px);
+.config-title {
+  margin: 0 0 13px;
+  color: #39322b;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-.wall-preview-plant {
-  position: absolute;
-  z-index: 1;
-  bottom: 10px;
-  left: 5%;
-  width: 100px;
-  height: 180px;
-  pointer-events: none;
-}
-
-.wall-preview-plant i {
-  position: absolute;
-  display: block;
-  width: 30px;
-  height: 65px;
-  border-radius: 100% 0 100% 0;
-  background: #64775a;
-  transform-origin: bottom center;
-}
-
-.wall-preview-plant i:nth-child(1) {
-  bottom: 20px;
-  left: 30px;
-  transform: rotate(-35deg);
-}
-
-.wall-preview-plant i:nth-child(2) {
-  bottom: 55px;
-  left: 10px;
-  transform: rotate(-55deg);
-}
-
-.wall-preview-plant i:nth-child(3) {
-  bottom: 70px;
-  left: 43px;
-  transform: rotate(30deg);
-}
-
-.wall-preview-plant i:nth-child(4) {
-  bottom: 100px;
-  left: 20px;
-  transform: rotate(-45deg);
-}
-
-.wall-preview-plant i:nth-child(5) {
-  bottom: 115px;
-  left: 48px;
-  transform: rotate(35deg);
-}
-
-.wall-preview-plant::after {
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-  width: 65px;
-  height: 48px;
-  border-radius: 4px 4px 16px 16px;
-  background: #b77f58;
-  content: "";
-}
-
-.wall-preview-bookshelf {
-  position: absolute;
-  right: 5%;
-  bottom: 10px;
-  z-index: 1;
-  display: flex;
-  width: 150px;
-  height: 95px;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 5px;
-  padding: 0 10px 10px;
-  border-bottom: 7px solid #a77b56;
-  pointer-events: none;
-}
-
-.wall-preview-bookshelf i {
-  display: block;
-  width: 18px;
-  height: 58px;
-  border-radius: 2px 2px 0 0;
-  background: #8e7563;
-}
-
-.wall-preview-bookshelf i:nth-child(2n) {
-  height: 70px;
-  background: #c29b72;
-}
-
-.wall-preview-bookshelf i:nth-child(3n) {
-  height: 48px;
-  background: #78816b;
-}
-
-.wall-preview-controls {
+.options-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 24px;
-  padding: 24px;
-  border: 1px solid #e8e0d7;
-  border-radius: 4px;
-  background: #fffdfa;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
 }
 
-.wall-preview-control {
+.options-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.option-btn {
+  min-width: 0;
+  min-height: 54px;
+  padding: 10px 8px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-width: 0;
-}
-
-.wall-preview-control label,
-.wall-preview-label {
-  color: #4a4038;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.wall-preview-control select,
-.wall-preview-control input {
-  width: 100%;
-  min-height: 44px;
-  padding: 10px 12px;
-  border: 1px solid #d9cec2;
-  border-radius: 3px;
-  outline: none;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  text-align: left;
+  color: #413a33;
   background: #fff;
-  color: #292522;
-}
-
-.wall-preview-control select:focus,
-.wall-preview-control input:focus {
-  border-color: #9b795c;
-  box-shadow: 0 0 0 2px rgba(155, 121, 92, 0.12);
-}
-
-.wall-preview-control input[type="range"] {
-  min-height: auto;
-  padding: 0;
-  accent-color: #9b795c;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-}
-
-.wall-preview-range-value {
-  color: #8a6a4f;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.wall-preview-button {
-  display: inline-flex;
-  min-height: 46px;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 22px;
-  border: 1px solid #292522;
-  border-radius: 3px;
-  background: #292522;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
+  border: 1px solid #e5ddd3;
   transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
-.wall-preview-button:hover {
-  border-color: #8a6a4f;
-  background: #8a6a4f;
+.option-btn:hover {
+  border-color: #aa8a6b;
 }
 
-.wall-preview-button-secondary {
-  border-color: #d9cec2;
-  background: transparent;
-  color: #292522;
+.option-btn.active {
+  border-color: #8d7155;
+  background: #f2ece4;
 }
 
-.wall-preview-button-secondary:hover {
-  border-color: #292522;
-  background: #292522;
-  color: #fff;
+.option-btn .size-text {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
-.wall-preview-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.wall-preview-note {
-  margin: 18px auto 0;
-  color: #82776c;
+.option-btn .price-text {
+  display: block;
+  color: #857362;
   font-size: 12px;
-  line-height: 1.7;
-  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .wall-preview-section {
-    padding: 48px 18px;
+/* Materials in two columns */
+
+.options-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.options-grid-2 .option-btn:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Frame swatches */
+
+.frames-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.frame-btn {
+  min-width: 0;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #6b6157;
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 10px;
+}
+
+.frame-btn.active {
+  color: #302b26;
+  border-color: #d8c8b6;
+  background: #f7f2eb;
+}
+
+.frame-circle {
+  width: 31px;
+  height: 31px;
+  border: 3px solid #e3d9cd;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(40, 30, 20, 0.08);
+}
+
+.frame-btn.active .frame-circle {
+  outline: 1px solid #80674e;
+  outline-offset: 2px;
+}
+
+/* Price and action buttons */
+
+.total-price {
+  margin-top: 25px;
+  color: #302b26;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+}
+
+.price-sub {
+  margin: 7px 0 19px;
+  color: #8a7d70;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  min-height: 47px;
+  padding: 13px 16px;
+  font-size: 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #45483a;
+  border: 1px solid #45483a;
+}
+
+.btn-primary:hover {
+  background: #303327;
+}
+
+.btn-secondary {
+  margin-top: 10px;
+  color: #3b352e;
+  background: transparent;
+  border: 1px solid #d9cfc3;
+}
+
+.btn-secondary:hover {
+  background: #f2ece4;
+}
+
+/* Different rooms */
+
+.main-container > div[style*="marginTop"] {
+  margin-top: 65px !important;
+}
+
+.main-container > div[style*="marginTop"] h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px !important;
+  font-weight: 400;
+}
+
+.main-container > div[style*="marginTop"] img {
+  transition: transform 0.35s ease;
+}
+
+.main-container > div[style*="marginTop"] [style*="cursor: pointer"] {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-container > div[style*="marginTop"] [style*="cursor: pointer"]:hover {
+  box-shadow: 0 8px 22px rgba(45, 33, 24, 0.09);
+}
+
+.main-container > div[style*="marginTop"] [style*="cursor: pointer"]:hover img {
+  transform: scale(1.025);
+}
+
+/* Responsive tablet layout */
+
+@media (max-width: 1100px) {
+  .header {
+    padding-right: 4%;
+    padding-left: 4%;
   }
 
-  .wall-preview-stage {
-    min-height: 360px;
-    padding: 36px 16px;
-  }
-
-  .wall-preview-controls {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .nav {
     gap: 18px;
-    padding: 20px;
   }
 
-  .wall-preview-plant {
-    left: 1%;
-    transform: scale(0.8);
-    transform-origin: bottom left;
+  .main-container {
+    padding-right: 4%;
+    padding-left: 4%;
   }
 
-  .wall-preview-bookshelf {
-    right: 1%;
-    transform: scale(0.8);
-    transform-origin: bottom right;
+  .product-grid {
+    grid-template-columns: minmax(160px, 0.75fr) minmax(260px, 1.3fr);
+    gap: 24px;
+  }
+
+  .configurator {
+    grid-column: 1 / -1;
+  }
+
+  .options-grid-2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .options-grid-2 .option-btn:last-child {
+    grid-column: auto;
+  }
+
+  .scene-container {
+    min-height: 440px;
   }
 }
 
-@media (max-width: 480px) {
-  .wall-preview-section {
-    padding: 36px 14px;
-  }
+/* Responsive mobile layout */
 
-  .wall-preview-header {
-    margin-bottom: 24px;
-  }
-
-  .wall-preview-title {
-    font-size: 32px;
-  }
-
-  .wall-preview-description {
-    font-size: 14px;
-  }
-
-  .wall-preview-stage {
-    min-height: 300px;
-    padding: 30px 12px;
-  }
-
-  .wall-preview-artwork {
-    width: 58%;
-    padding: 7px;
-  }
-
-  .wall-preview-artwork.size-small {
-    width: 40%;
-  }
-
-  .wall-preview-artwork.size-medium {
-    width: 50%;
-  }
-
-  .wall-preview-artwork.size-large {
-    width: 62%;
-  }
-
-  .wall-preview-artwork-frame {
-    padding: 5px;
-  }
-
-  .wall-preview-plant {
-    transform: scale(0.55);
-  }
-
-  .wall-preview-bookshelf {
-    transform: scale(0.55);
-  }
-
-  .wall-preview-controls {
-    grid-template-columns: 1fr;
+@media (max-width: 700px) {
+  .header {
+    min-height: 74px;
+    padding: 18px 20px;
+    flex-wrap: wrap;
     gap: 16px;
-    padding: 16px;
   }
 
-  .wall-preview-actions {
-    flex-direction: column;
+  .logo {
+    font-size: 21px;
   }
 
-  .wall-preview-button {
+  .nav {
+    order: 3;
     width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .header-icons {
+    gap: 13px;
+    font-size: 17px;
+  }
+
+  .main-container {
+    padding: 30px 18px 48px;
+  }
+
+  .section-header {
+    margin-bottom: 25px;
+  }
+
+  .page-title {
+    font-size: 34px;
+  }
+
+  .page-subtitle {
+    font-size: 13px;
+  }
+
+  .product-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .info-card {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    column-gap: 17px;
+    align-items: start;
+  }
+
+  .info-card > img {
+    grid-row: span 4;
+    margin-bottom: 0;
+  }
+
+  .info-card h3 {
+    font-size: 21px;
+  }
+
+  .info-card .desc {
+    margin-top: 8px;
+  }
+
+  .scene-container {
+    min-height: 390px;
+  }
+
+  .artwork-on-wall {
+    max-width: 65%;
+  }
+
+  .configurator {
+    padding: 23px 18px;
+  }
+
+  .options-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .options-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .options-grid-2 .option-btn:last-child {
+    grid-column: auto;
+  }
+
+  .frames-grid {
+    gap: 6px;
+  }
+
+  .main-container > div[style*="marginTop"] h3 {
+    font-size: 26px !important;
+  }
+
+  .main-container > div[style*="marginTop"] > div[style*="gridTemplateColumns"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .info-card {
+    grid-template-columns: 90px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+  }
+
+  .scene-container {
+    min-height: 320px;
+  }
+
+  .frames-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -605,892 +598,5 @@ a {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
   }
 }
-```
-Отлично! Твой CSS-код показывает, что сейчас на сайте сверстан базовый интерактивный блок примерки картины на стене (wall-preview-stage), выполненный в приятных бежево-деревянных тонах.
-
-Если сравнить твой текущий CSS с макетом на скриншоте, вот что уже сделано и к чему стоит стремиться дальше:   
-JPG
-
-🔍 Что уже хорошо сделано в CSS:
-Отличная цветовая гамма: Базовые цвета (#faf8f5, #292522, #9b795c, #e8dfd3) идеально попадают в естественную «галерейную» палитру.
-
-Адаптивность и мобильная версия: Настроены грамотные @media запросы для мобильных устройств, плавные шрифты (clamp) и безопасность анимаций (prefers-reduced-motion).
-
-Имитация интерьера: Есть CSS-растение (.wall-preview-plant) и полка с книгами (.wall-preview-bookshelf) для придания объёма сцене.
-
-🎯 Как приблизить текущий верстку к дизайну с макета
-На скриншоте вместо символических CSS-декораций используется полноценная реалистичная комната с диваном, журнальным столиком и естественным освещением.   
-JPG
-
-Вот 3 главных направления для доработки, которые можно передать дизайнеру и верстальщику:
-
-1. Изменение макета сцены (Layout)
-На макете: Занимает 2/3 ширины экрана под реалистичное фото интерьера с картиной над диваном, а справа (1/3 ширины) размещена удобная вертикальная панель выбора опций.   
-JPG
-
-В CSS сейчас: Элементы управления (.wall-preview-controls) расположенны сеткой снизу под сценой (display: grid; grid-template-columns: repeat(3, ...)).
-
-💡 Рекомендация: На десктопе перевести родительский контейнер на display: grid или flex с боковой панелью справа:
-
-CSS
-.wall-preview-container {
-  display: grid;
-  grid-template-columns: 1fr 380px; /* Слева сцена, справа конфигуратор */
-  gap: 32px;
-}
-2. Замена CSS-фона на фото-интерьеры (Комнаты)
-На макете: Реалистичное фото дивана и стены с превью-миниатюрами комнат внизу (Living Room, Bedroom, Office, Dining Room).   
-JPG
-
-💡 Рекомендация: Вместо текстуры .wall-preview-stage использовать тег <img> или background-image с качественным фото интерьера без картины, а саму картину накладывать поверх с помощью абсолютного позиционирования (position: absolute).
-
-3. Панель параметров (Шаги 1, 2, 3)
-На макете: Кнопки выбора сгруппированы по шагам:   
-JPG
-
-Choose size: Сетка из прямоугольных кнопок с размером и ценой (напр. 8×10 in — $29).
-
-Choose material: Кнопки выборки материала (Fine Art Paper, Canvas, Framed Print).
-
-Choose frame: Круглые/квадратные иконки текстур рам (Natural Oak, Black, White, Gold).
-
-В CSS сейчас: Поля <select> и <input>.   
-JPG
-
-💡 Рекомендация: Заменить стандартные <select> на кастомные радио-кнопки/плитки (button или <label> с чекбоксами/радиобаттонами), чтобы пользователь мог выбирать опции в один клик.
-
-💬 Сообщение для разработчика / верстальщика:
-«Привет! В index.css заложена отличная база по цветам и сетке. Нам нужно доработать блок примерочной картины под макет:
-
-Сделать двухколоночную верстку на десктопе (слева — фото интерьера, справа — вертикальная панель параметров).
-
-В блоке интерьера заменить CSS-узоры стены и декорации на реальное фоновое фото комнаты с возможностью переключения (Гостиная, Спальня, Офис, Столовая).
-
-Заменить поля выпадающих списков <select> на интерактивные плитки/кнопки для выбора размера, материала и иконок с рамами.»
-
-function WallPreview({ artwork }: { artwork: Artwork }) {
-  const [roomStyle, setRoomStyle] = useState<
-    'living' | 'reading' | 'own'
-  >('living');
-
-  const [scale, setScale] = useState<
-    'small' | 'medium' | 'large'
-  >('medium');
-
-  const [uploadedRoom, setUploadedRoom] = useState<string | null>(
-    null
-  );
-
-  const [positionX, setPositionX] = useState(50);
-  const [positionY, setPositionY] = useState(45);
-
-  const [uploadError, setUploadError] = useState('');
-
-  const handleRoomUpload = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = event.target.files?.[0];
-
-    if (!file) return;
-
-    if (!file.type.startsWith('image/')) {
-      setUploadError('Пожалуйста, выберите изображение.');
-      return;
-    }
-
-    if (file.size > 10 * 1024 * 1024) {
-      setUploadError('Размер файла не должен превышать 10 МБ.');
-      return;
-    }
-
-    const reader = new FileReader();
-
-    reader.onload = () => {
-      if (typeof reader.result === 'string') {
-        setUploadedRoom(reader.result);
-        setRoomStyle('own');
-        setUploadError('');
-        setPositionX(50);
-        setPositionY(45);
-      }
-    };
-
-    reader.onerror = () => {
-      setUploadError('Не удалось загрузить изображение. Попробуйте ещё раз.');
-    };
-
-    reader.readAsDataURL(file);
-  };
-
-  const scaleWidths = {
-    small: '24%',
-    medium: '34%',
-    large: '46%',
-  };
-
-  const isOwnRoom = roomStyle === 'own' && uploadedRoom !== null;
-
-  const artworkStyle: React.CSSProperties = {
-    position: 'absolute',
-    left: `${positionX}%`,
-    top: `${positionY}%`,
-    width: scaleWidths[scale],
-    maxHeight: '75%',
-    objectFit: 'contain',
-    transform: 'translate(-50%, -50%)',
-    boxShadow: '0 12px 28px rgba(35, 27, 20, 0.24)',
-    border: '7px solid #f8f5ef',
-    outline: '1px solid rgba(65, 48, 35, 0.18)',
-    transition:
-      'width 250ms ease, left 150ms ease, top 150ms ease',
-  };
-
-  return (
-    <section className="wall-preview-section">
-      <div className="wall-preview-heading">
-        <div>
-          <p className="wall-preview-eyebrow">ART IN YOUR SPACE</p>
-          <h2>Найдите идеальное место для искусства</h2>
-          <p className="wall-preview-description">
-            Представьте, как картина будет выглядеть в вашем интерьере.
-            Выберите комнату или загрузите собственную фотографию.
-          </p>
-        </div>
-      </div>
-
-      <div className="wall-preview-layout">
-        <div className="wall-preview-controls">
-          <div className="wall-preview-control-group">
-            <h3>Выберите интерьер</h3>
-
-            <div className="wall-preview-room-options">
-              <button
-                type="button"
-                className={`wall-preview-option ${
-                  roomStyle === 'living' ? 'is-active' : ''
-                }`}
-                onClick={() => setRoomStyle('living')}
-                aria-pressed={roomStyle === 'living'}
-              >
-                <span className="wall-preview-option-icon">⌂</span>
-                <span>
-                  <strong>Гостиная</strong>
-                  <small>Тёплый минимализм</small>
-                </span>
-              </button>
-
-              <button
-                type="button"
-                className={`wall-preview-option ${
-                  roomStyle === 'reading' ? 'is-active' : ''
-                }`}
-                onClick={() => setRoomStyle('reading')}
-                aria-pressed={roomStyle === 'reading'}
-              >
-                <span className="wall-preview-option-icon">◫</span>
-                <span>
-                  <strong>Уголок для чтения</strong>
-                  <small>Спокойная атмосфера</small>
-                </span>
-              </button>
-
-              <button
-                type="button"
-                className={`wall-preview-option ${
-                  roomStyle === 'own' ? 'is-active' : ''
-                }`}
-                onClick={() => setRoomStyle('own')}
-                aria-pressed={roomStyle === 'own'}
-              >
-                <span className="wall-preview-option-icon">＋</span>
-                <span>
-                  <strong>Моя комната</strong>
-                  <small>Загрузите своё фото</small>
-                </span>
-              </button>
-            </div>
-          </div>
-
-          <div className="wall-preview-control-group">
-            <h3>Размер картины</h3>
-
-            <div className="wall-preview-size-options">
-              {(
-                [
-                  ['small', 'Маленький'],
-                  ['medium', 'Средний'],
-                  ['large', 'Большой'],
-                ] as const
-              ).map(([value, label]) => (
-                <button
-                  type="button"
-                  key={value}
-                  className={`wall-preview-size-button ${
-                    scale === value ? 'is-active' : ''
-                  }`}
-                  onClick={() => setScale(value)}
-                  aria-pressed={scale === value}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {roomStyle === 'own' && (
-            <div className="wall-preview-control-group">
-              <h3>Фотография вашего интерьера</h3>
-
-              <label className="wall-preview-upload-button">
-                <span>↑</span>
-                {uploadedRoom
-                  ? 'Загрузить другое фото'
-                  : 'Выбрать фотографию'}
-
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleRoomUpload}
-                  hidden
-                />
-              </label>
-
-              <p className="wall-preview-help">
-                Подойдут фотографии в формате JPG, PNG или WEBP,
-                размером до 10 МБ.
-              </p>
-
-              {uploadError && (
-                <p className="wall-preview-error" role="alert">
-                  {uploadError}
-                </p>
-              )}
-
-              {!uploadedRoom && (
-                <p className="wall-preview-help">
-                  После загрузки фотографии картина появится поверх
-                  изображения комнаты.
-                </p>
-              )}
-            </div>
-          )}
-
-          <div className="wall-preview-control-group">
-            <h3>Расположение картины</h3>
-
-            <label
-              className="wall-preview-slider-label"
-              htmlFor="wall-position-x"
-            >
-              По горизонтали
-              <span>{positionX}%</span>
-            </label>
-
-            <input
-              id="wall-position-x"
-              className="wall-preview-slider"
-              type="range"
-              min="10"
-              max="90"
-              value={positionX}
-              onChange={(event) =>
-                setPositionX(Number(event.target.value))
-              }
-            />
-
-            <label
-              className="wall-preview-slider-label"
-              htmlFor="wall-position-y"
-            >
-              По вертикали
-              <span>{positionY}%</span>
-            </label>
-
-            <input
-              id="wall-position-y"
-              className="wall-preview-slider"
-              type="range"
-              min="15"
-              max="80"
-              value={positionY}
-              onChange={(event) =>
-                setPositionY(Number(event.target.value))
-              }
-            />
-          </div>
-
-          <button
-            type="button"
-            className="wall-preview-reset-button"
-            onClick={() => {
-              setScale('medium');
-              setPositionX(50);
-              setPositionY(45);
-            }}
-          >
-            Сбросить настройки
-          </button>
-        </div>
-
-        <div className="wall-preview-visual">
-          <div
-            className={`wall-preview-scene ${
-              roomStyle === 'living'
-                ? 'wall-preview-scene-living'
-                : roomStyle === 'reading'
-                  ? 'wall-preview-scene-reading'
-                  : 'wall-preview-scene-own'
-            }`}
-            style={
-              isOwnRoom
-                ? {
-                    backgroundImage: `url("${uploadedRoom}")`,
-                  }
-                : undefined
-            }
-          >
-            {!isOwnRoom && (
-              <>
-                <div className="wall-preview-ceiling" />
-                <div className="wall-preview-floor" />
-
-                {roomStyle === 'living' ? (
-                  <>
-                    <div className="wall-preview-window">
-                      <div />
-                      <div />
-                    </div>
-
-                    <div className="wall-preview-sofa">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-
-                    <div className="wall-preview-plant">
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                    </div>
-
-                    <div className="wall-preview-side-table" />
-                  </>
-                ) : (
-                  <>
-                    <div className="wall-preview-reading-window">
-                      <div />
-                      <div />
-                    </div>
-
-                    <div className="wall-preview-armchair">
-                      <span />
-                    </div>
-
-                    <div className="wall-preview-bookshelf">
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                    </div>
-
-                    <div className="wall-preview-reading-lamp">
-                      <span />
-                    </div>
-                  </>
-                )}
-              </>
-            )}
-
-            {isOwnRoom ? (
-              <img
-                src={artwork.imageUrl}
-                alt={artwork.title}
-                className="wall-preview-artwork"
-                style={artworkStyle}
-              />
-            ) : (
-              <img
-                src={artwork.imageUrl}
-                alt={artwork.title}
-                className="wall-preview-artwork"
-                style={artworkStyle}
-              />
-            )}
-
-            {isOwnRoom && (
-              <div className="wall-preview-own-label">
-                Предварительный просмотр
-              </div>
-            )}
-          </div>
-
-          <div className="wall-preview-caption">
-            <div>
-              <strong>{artwork.title}</strong>
-              <span>Предварительный просмотр в интерьере</span>
-            </div>
-
-            <span className="wall-preview-caption-mark">
-              MAROWNIE
-            </span>
-          </div>
-
-          <p className="wall-preview-disclaimer">
-            Визуализация предназначена для оценки расположения и размера.
-            Реальные пропорции и освещение могут отличаться.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-Этот компонент (WallPreview) выглядит просто великолепно! Ты написал(а) или собрал(а) очень чистый, продуманный и качественный код на React и TypeScript.
-
-🌟 Что особенно круто сделано в этом коде:
-Загрузка пользовательского фото («Моя комната»): Есть полная валидация файлов (проверка типа image/ и ограничения по размеру в 10 МБ), а также безопасное чтение через FileReader в формате Data URL.
-
-Точная интерактивность: Слайдеры горизонтального и вертикального положения (positionX, positionY) позволяют пользователю идеально настроить расположение картины на стене.
-
-Удобный UX: Предусмотрена кнопка сброса настроек, обработка ошибок загрузки и состояния кнопок через aria-pressed для доступности (accessibility).
-
-🛠️ Небольшое улучшение для чистоты кода (Refactoring)
-В секции рендеринга картинки у тебя используется дублирование:
-
-TypeScript
-{isOwnRoom ? (
-  <img src={artwork.imageUrl} alt={artwork.title} className="wall-preview-artwork" style={artworkStyle} />
-) : (
-  <img src={artwork.imageUrl} alt={artwork.title} className="wall-preview-artwork" style={artworkStyle} />
-)}
-Поскольку тег и его пропсы абсолютно одинаковы в обоих случаях, этот тернарный оператор можно убрать и выводить картинку единоразово — её поведение и так динамически подстраивается через artworkStyle и стили родительского контейнера.
-
-🚀 Что делаем дальше?
-У тебя уже отлично работает интерактивная примерка картины. Какую часть проекта подключим или допишем следующей?
-
-Конфигуратор товара (Product Customizer): Панель выбора размеров, материалов (холст, бумага) и багетов (рам) с динамическим пересчетом цены.
-
-Галерея или каталог (Gallery Grid): Карточки товаров с фильтрами по стилям и коллекциям.
-
-Логику корзины и избранного (Cart & Wishlist): Управление добавлением выбранной конфигурации картины в покупку.
-
-ты сможешь написать код чтобы структура сайта было как на фотот и дизайн
-Да, конечно! Я могу написать для тебя полный код (компоненты React/TypeScript и стили CSS), чтобы полностью воссоздать эту структуру и дизайн.   
-JPG
-
-Если разобрать макет со скриншота, страница состоит из следующих ключевых блоков, которые можно собрать в единый компонент:   
-JPG
-
-📐 Структура сайта по макету:
-Шапка сайта (Header):
-
-Слева: Элегантный логотип MAROWNIE Art.   
-JPG
-
-По центру: Навигационные ссылки (Home, Gallery, Collections, About).   
-JPG
-
-Справа: Функциональные иконки (Поиск, Избранное, Корзина).   
-JPG
-
-Главный рабочий экран (3 колонки):
-
-Левая колонка (Информация о картине): Превью работы (Tuscan Sunset), имя автора, год, описание, а также галочки доступных типов печати.   
-JPG
-
-Центральная колонка (Интерьерная сцена): Большое фото комнаты с картиной на стене, переключатели-миниатюры под ним и кнопка «View in your room».   
-JPG
-
-Правая колонка (Конфигуратор товара):
-
-Шаг 1: Выбор размера (Choose size с ценами от $29 до $109).   
-JPG
-
-Шаг 2: Выбор материала (Choose material: Fine Art Paper, Canvas, Framed Print).   
-JPG
-
-Шаг 3: Выбор рамы для принтов (Choose frame: Natural Oak, Black, White, Gold с визуальными иконками).   
-JPG
-
-Итог: Динамическая цена и кнопки Add to Cart / Save to Wishlist.   
-JPG
-
-Нижняя секция («Try in Different Rooms»):
-
-Галерея вариантов комнат (Living Room, Bedroom, Office, Dining Room), позволяющая быстро переключать атмосферу.   
-JPG
-
-Блок с иконками преимуществ сервиса в самом низу (Premium Quality, Worldwide Shipping, Secure Payment).   
-JPG
-
-С чего начнем написание кода?
-Я могу подготовить для тебя:
-
-Код главного экрана продукта (объединяющий левую карточку, центральную сцену и правый конфигуратор).
-
-Обновленные стили (CSS) для точного соответствия премиальной бежево-песочной гамме с макета.   
-JPG
-
-Напиши, какой элемент или компонент ты хочешь запрограммировать в первую очередь!
-
-напиши мне конкретно что открыть и куда вставить код
-Чтобы твой проект на React, TypeScript и Vite заработал и выглядел в точности как на макете, выполни следующие шаги в своем редакторе кода (например, в VS Code):   
-JPG
-
-Шаг 1. Куда вставить стили (src/index.css)
-В левой панели файлов открой папку src, а в ней файл index.css.
-
-Полностью удали старое содержимое этого файла.
-
-Вставь туда весь CSS-код, который ты отправлял ранее (с классами .wall-preview-section, .wall-preview-stage и т. д.). Этот файл отвечает за цвета фона, шрифты, сетку и адаптивность под мобильные устройства.
-
-Шаг 2. Куда вставить код компонента (src/components/WallPreview.tsx)
-В папке src создай новую папку (если её нет) и назови её components.
-
-Внутри папки src/components/ создай файл WallPreview.tsx.
-
-Вставь в этот файл тот код компонента на React, который ты отправлял сообщением выше (с логикой переключения комнат, загрузкой своего фото и слайдерами).
-
-Шаг 3. Подключение в главный файл (src/App.tsx)
-Чтобы сайт отобразил созданный компонент, его нужно подключить в главный файл приложения:
-
-Открой файл src/App.tsx.
-
-Замени его код на следующий вариант:
-
-TypeScript
-import React from 'react';
-import WallPreview from './components/WallPreview';
-import './index.css';
-
-// Тестовые данные для картины (как на макете)
-const currentArtwork = {
-  title: 'Tuscany Sunset',
-  imageUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80',
-};
-
-export default function App() {
-  return (
-    <div className="app">
-      {/* Главный блок примерки картины на стену */}
-      <WallPreview artwork={currentArtwork} />
-    </div>
-  );
-}
-Шаг 4. Как запустить проект локально
-Открой встроенный терминал в редакторе кода (нажми комбинацию клавиш Ctrl + ~ на Windows или Cmd + ~ на Mac).
-
-Установи зависимости (если ещё не делал этого), выполнив команду:
-
-Bash
-npm install
-Запусти проект в режиме разработки:
-
-Bash
-npm run dev
-В терминале появится ссылка (обычно http://localhost:5173). Нажми на неё, чтобы открыть сайт в браузере и протестировать работу.
-
-можно не васе сразу по шагово
-Давай делать всё постепенно, шаг за шагом!
-
-Начнем с самого простого и первого шага: настройки стилей.
-
-Шаг 1: Настройка стилей (файл index.css)
-В левой панели твоей программы (VS Code или другого редактора) найди папку src.
-
-Внутри этой папки открой файл index.css.
-
-Очисти его полностью (удали всё, что там сейчас написано).
-
-Вставь в него следующий CSS-код (он задает правильные бежево-песочные цвета, шрифты и сетки как на макете):   
-JPG
-
-CSS
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: #2c2723;
-  background-color: #f3efe9;
-}
-
-body {
-  min-height: 100vh;
-  background: #f3efe9;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
-
-/* Шапка сайта */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 60px;
-  background: #f3efe9;
-}
-
-.logo {
-  font-family: 'Georgia', serif;
-  font-size: 24px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-
-.nav {
-  display: flex;
-  gap: 32px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #4a4540;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-
-.nav a:hover {
-  color: #000;
-}
-
-.header-icons {
-  display: flex;
-  gap: 20px;
-  font-size: 18px;
-}
-
-/* Основной контейнер */
-.main-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px 60px;
-}
-
-.page-title {
-  font-family: 'Georgia', serif;
-  font-size: 42px;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-
-.page-subtitle {
-  color: #6e6760;
-  font-size: 15px;
-  margin-bottom: 32px;
-  max-width: 500px;
-  line-height: 1.5;
-}
-
-/* Сетка из 3 колонок */
-.product-grid {
-  display: grid;
-  grid-template-columns: 280px 1fr 340px;
-  gap: 32px;
-  align-items: start;
-}
-
-/* Левая колонка - карточка */
-.info-card {
-  background: #fcfbfa;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-}
-
-.info-card img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 16px;
-}
-
-.info-card h3 {
-  font-family: 'Georgia', serif;
-  font-size: 20px;
-  margin-bottom: 4px;
-}
-
-.info-card .artist {
-  color: #8c8278;
-  font-size: 13px;
-  margin-bottom: 12px;
-}
-
-.info-card .desc {
-  font-size: 13px;
-  color: #5c554e;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.info-card .prints-list {
-  list-style: none;
-  font-size: 13px;
-  color: #4a4540;
-}
-
-.info-card .prints-list li {
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Центральная колонка - Сцена */
-.scene-container {
-  position: relative;
-  width: 100%;
-  height: 520px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-}
-
-.artwork-on-wall {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-
-/* Правая колонка - Конфигуратор */
-.configurator {
-  background: #fcfbfa;
-  border-radius: 8px;
-  padding: 28px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-}
-
-.config-section {
-  margin-bottom: 24px;
-}
-
-.config-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.options-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.options-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-}
-
-.option-btn {
-  border: 1px solid #e0d8cf;
-  border-radius: 6px;
-  padding: 10px 6px;
-  text-align: center;
-  background: #fff;
-  transition: all 0.2s;
-}
-
-.option-btn.active {
-  border-color: #2c2723;
-  background: #f4efe9;
-}
-
-.option-btn .size-text {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.option-btn .price-text {
-  display: block;
-  font-size: 12px;
-  color: #7a7067;
-  margin-top: 2px;
-}
-
-/* Рамы */
-.frames-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.frame-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-}
-
-.frame-circle {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid #e0d8cf;
-}
-
-.frame-btn.active .frame-circle {
-  border-color: #2c2723;
-}
-
-/* Финальная цена и кнопки */
-.total-price {
-  font-size: 28px;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-.price-sub {
-  font-size: 12px;
-  color: #8c8278;
-  margin-bottom: 16px;
-}
-
-.btn-primary {
-  width: 100%;
-  background: #505342;
-  color: #fff;
-  padding: 14px;
-  border-radius: 6px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.btn-secondary {
-  width: 100%;
-  border: 1px solid #d0c6bc;
-  padding: 12px;
-  border-radius: 6px;
-  color: #2c2723;
-  font-size: 13px;
-}
-Сохрани файл (Ctrl + S или Cmd + S).
-
-Когда сохранишь файл — напиши мне «Готово» или «Сделай следующий шаг», и я пришлю код для Шага 2!
-
-
-
-
-
-Gemini — это ИИ. Он может ошибаться.
